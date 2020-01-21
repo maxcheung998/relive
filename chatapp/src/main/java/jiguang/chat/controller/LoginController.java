@@ -81,27 +81,27 @@ public class LoginController implements View.OnClickListener {
                 }
                 if (userId.length() < 4 || userId.length() > 128) {
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "用户名为4-128位字符");
+                    ToastUtil.shortToast(mContext, "用戶名為4-128位字符");
                     return;
                 }
                 if (password.length() < 4 || password.length() > 128) {
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "密码为4-128位字符");
+                    ToastUtil.shortToast(mContext, "密碼為4-128位字符");
                     return;
                 }
                 if (isContainChinese(userId)) {
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "用户名不支持中文");
+                    ToastUtil.shortToast(mContext, "用戶名不支持中文");
                     return;
                 }
                 if (!whatStartWith(userId)) {
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "用户名以字母或者数字开头");
+                    ToastUtil.shortToast(mContext, "用戶名以字母或者數字開頭");
                     return;
                 }
                 if (!whatContain(userId)) {
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "只能含有: 数字 字母 下划线 . - @");
+                    ToastUtil.shortToast(mContext, "只能含有: 數字 字母 底缐 . - @");
                     return;
                 }
                 //登陆
@@ -131,10 +131,10 @@ public class LoginController implements View.OnClickListener {
                                     user.save();
                                 }
                                 mContext.goToActivity(mContext, MainActivity.class);
-                                ToastUtil.shortToast(mContext, "登陆成功");
+                                ToastUtil.shortToast(mContext, "登入成功");
                                 mContext.finish();
                             } else {
-                                ToastUtil.shortToast(mContext, "登陆失败" + responseMessage);
+                                ToastUtil.shortToast(mContext, "登入失敗" + responseMessage);
                             }
                         }
                     });
@@ -147,7 +147,7 @@ public class LoginController implements View.OnClickListener {
                                 SharePreferenceManager.setRegisterName(userId);
                                 SharePreferenceManager.setRegistePass(password);
                                 mContext.startActivity(new Intent(mContext, FinishRegisterActivity.class));
-                                ToastUtil.shortToast(mContext, "注册成功");
+                                ToastUtil.shortToast(mContext, "注冊成功");
                             } else {
                                 HandleResponseCode.onHandle(mContext, i, false);
                             }
@@ -161,14 +161,14 @@ public class LoginController implements View.OnClickListener {
                 JGApplication.registerOrLogin++;
                 if (JGApplication.registerOrLogin % 2 == 0) {
                     mContext.mBtn_login.setText("注册");
-                    mContext.mNewUser.setText("去登陆");
-                    mContext.mLogin_register.setText("立即登陆");
-                    mContext.mLogin_desc.setText("已有账号? ");
+                    mContext.mNewUser.setText("登入");
+                    mContext.mLogin_register.setText("立即登入");
+                    mContext.mLogin_desc.setText("已有賬號？ ");
                 } else {
-                    mContext.mBtn_login.setText("登录");
+                    mContext.mBtn_login.setText("登入");
                     mContext.mNewUser.setText("新用户");
                     mContext.mLogin_register.setText("立即注册");
-                    mContext.mLogin_desc.setText("还没有账号? ");
+                    mContext.mLogin_desc.setText("未有賬號? ");
                 }
                 break;
         }
