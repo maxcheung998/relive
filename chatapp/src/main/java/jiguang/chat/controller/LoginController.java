@@ -70,12 +70,12 @@ public class LoginController implements View.OnClickListener {
                 final String userId = mContext.getUserId();
                 final String password = mContext.getPassword();
                 if (TextUtils.isEmpty(userId)) {
-                    ToastUtil.shortToast(mContext, "用户名不能为空");
+                    ToastUtil.shortToast(mContext, "用戶名不能為空");
                     mContext.mLogin_userName.setShakeAnimation();
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    ToastUtil.shortToast(mContext, "密码不能为空");
+                    ToastUtil.shortToast(mContext, "密碼不能為空");
                     mContext.mLogin_passWord.setShakeAnimation();
                     return;
                 }
