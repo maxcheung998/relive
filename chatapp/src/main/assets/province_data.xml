@@ -1,0 +1,28 @@
+<root>
+    <province name="香港">
+        <city name="新界">
+            <district name="荃灣區" zipcode="000000" />
+            <district name="元朗區" zipcode="000000" />
+            <district name="大埔區" zipcode="000000" />
+            <district name="北區" zipcode="000000" />
+            <district name="沙田區" zipcode="000000" />
+            <district name="西貢區" zipcode="000000" />
+            <district name="屯門區" zipcode="000000" />
+            <district name="離島區" zipcode="000000" />
+            <district name="葵青區" zipcode="000000" />
+        </city>
+        <city name="九龍">
+            <district name="黃大仙區" zipcode="000000" />
+            <district name="深水埗區" zipcode="000000" />
+            <district name="觀塘區" zipcode="000000" />
+            <district name="油尖旺區" zipcode="000000" />
+            <district name="九龍城區" zipcode="000000" />
+        </city>
+        <city name="香港島">
+            <district name="東區" zipcode="000000" />
+            <district name="中西區" zipcode="000000" />
+            <district name="灣仔區" zipcode="000000" />
+            <district name="南區" zipcode="000000" />
+        </city>
+    </province>
+</root>
