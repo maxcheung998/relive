@@ -697,7 +697,7 @@ public class ChattingListAdapter extends BaseAdapter {
                         }
                     });
                 } else if (!((UserInfo) msg.getTargetInfo()).getUserName().equals(JMessageClient.getMyInfo().getUserName())) {
-                    holder.text_receipt.setText("未读");
+                    holder.text_receipt.setText("未讀");
                 }
             }
         }
