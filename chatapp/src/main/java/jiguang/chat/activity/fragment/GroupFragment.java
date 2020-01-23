@@ -81,7 +81,7 @@ public class GroupFragment extends BaseFragment {
         mListView.setOnItemLongClickListener((parent, view, position, id) -> {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-            builder.setTitle("是否删除?").setPositiveButton("确定", (dialog, which) -> {
+            builder.setTitle("要刪除嗎?").setPositiveButton("確定", (dialog, which) -> {
 
                 GroupApplyEntry entry = (GroupApplyEntry) parent.getItemAtPosition(position);
                 entry.delete();

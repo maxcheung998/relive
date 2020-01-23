@@ -154,7 +154,7 @@ public class ChatItemController {
                 holder.tv_nickUser.setText(mUserName[0]);
             } else {
                 holder.tv_nickUser.setText(name);
-                holder.tv_userName.setText("用户名: " + mUserName[0]);
+                holder.tv_userName.setText("用戶名: " + mUserName[0]);
             }
             if (userInfo.getAvatarFile() != null) {
                 holder.business_head.setImageBitmap(BitmapFactory.decodeFile(userInfo.getAvatarFile().getAbsolutePath()));
@@ -175,7 +175,7 @@ public class ChatItemController {
                             holder.tv_nickUser.setText(mUserName[0]);
                         } else {
                             holder.tv_nickUser.setText(name);
-                            holder.tv_userName.setText("用户名: " + mUserName[0]);
+                            holder.tv_userName.setText("用戶名: " + mUserName[0]);
                         }
                         if (userInfo.getAvatarFile() != null) {
                             holder.business_head.setImageBitmap(BitmapFactory.decodeFile(userInfo.getAvatarFile().getAbsolutePath()));
@@ -271,7 +271,7 @@ public class ChatItemController {
                             intent.putExtra("fromSearch", true);
                             mContext.startActivity(intent);
                         }else {
-                            ToastUtil.shortToast(mContext, "获取信息失败,稍后重试");
+                            ToastUtil.shortToast(mContext, "獲取資訊失敗,請稍候重試");
                         }
                     }
                 });

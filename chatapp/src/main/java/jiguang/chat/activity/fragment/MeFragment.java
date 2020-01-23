@@ -93,7 +93,7 @@ public class MeFragment extends BaseFragment {
             intent.setClass(mContext, LoginActivity.class);
             startActivity(intent);
         } else {
-            ToastUtil.shortToast(mContext, "退出失败");
+            ToastUtil.shortToast(mContext, "退出失敗");
         }
     }
 
