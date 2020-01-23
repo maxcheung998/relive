@@ -13,8 +13,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
-                JPUSH_APPKEY : "1b57ba932523de749accdb06", //JPush上注册的包名对应的appkey.
-                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                JPUSH_APPKEY : "1b57ba932523de749accdb06", //appkey.
+                JPUSH_CHANNEL: "developer-default",
         ]
 
         ndk {
@@ -69,9 +69,14 @@ dependencies {
     implementation project(':reclib-testemoticons')
     implementation 'com.contrarywind:Android-PickerView:3.2.4'
     implementation 'com.yanzhenjie:permission:1.1.2'
-    implementation 'cn.jiguang.sdk:jmessage:2.9.0'  // 此处以J
+    implementation 'cn.jiguang.sdk:jmessage:2.9.0'
     implementation 'cn.jiguang.sdk:jcore:2.0.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
     implementation 'com.github.mtotschnig:StickyListHeaders:2.7.1'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.14'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 }

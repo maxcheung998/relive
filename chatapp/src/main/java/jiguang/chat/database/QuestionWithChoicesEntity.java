@@ -1,4 +1,4 @@
-package jiguang.chat.entity;
+package jiguang.chat.database;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;

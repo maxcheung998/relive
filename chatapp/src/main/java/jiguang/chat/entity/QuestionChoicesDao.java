@@ -8,6 +8,8 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
+import jiguang.chat.database.QuestionWithChoicesEntity;
+
 
 @Dao
 public interface QuestionChoicesDao
