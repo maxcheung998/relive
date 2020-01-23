@@ -24,4 +24,5 @@ public class QuestionnaireActivity extends BaseActivity {
         mQuestionsListView = (TextView) findViewById(R.id.textView);
         mQuestionsListView.setText("Test");
     }
+
 }
