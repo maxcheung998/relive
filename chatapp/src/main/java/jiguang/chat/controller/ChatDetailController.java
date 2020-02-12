@@ -127,7 +127,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
         mMyUsername = myInfo.getUserName();
         // 是群组
         if (mGroupId != 0) {
-            mChatDetailView.setTitle("群组信息");
+            mChatDetailView.setTitle("群組信息");
             mIsGroup = true;
             //获得群组基本信息：群主ID、群组名、群组人数
             Conversation conv = JMessageClient.getGroupConversation(mGroupId);
@@ -178,7 +178,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
 
             // 是单聊
         } else {
-            mChatDetailView.setTitle("聊天设置");
+            mChatDetailView.setTitle("聊天設置");
             Conversation conv = JMessageClient.getSingleConversation(mTargetId, mTargetAppKey);
             mUserInfo = (UserInfo) conv.getTargetInfo();
             mChatDetailView.initNoDisturb(mUserInfo.getNoDisturb());
@@ -318,7 +318,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                 break;
             case R.id.chat_detail_add_friend:
                 if (mUserInfo.isFriend()) {
-                    ToastUtil.shortToast(mContext, "对方已经是你的好友");
+                    ToastUtil.shortToast(mContext, "對方已經是你的好友");
                 } else {
                     intent.setClass(mContext, VerificationActivity.class);
                     //对方信息
@@ -456,7 +456,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                         JMessageClient.deleteGroupConversation(mGroupId);
                         mContext.startMainActivity();
                     } else {
-                        ToastUtil.shortToast(mContext, "退出失败");
+                        ToastUtil.shortToast(mContext, "退出失敗");
                     }
                 }
             });
@@ -487,7 +487,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                         ToastUtil.shortToast(mContext, "移除好友");
                         delConvAndReturnMainActivity();
                     } else {
-                        ToastUtil.shortToast(mContext, "移除失败");
+                        ToastUtil.shortToast(mContext, "移除失敗");
                     }
                 }
             });
@@ -613,7 +613,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                 if (status == 0) {
                     refreshMemberList();
                 } else {
-                    ToastUtil.shortToast(mContext, "添加失败");
+                    ToastUtil.shortToast(mContext, "添加失敗");
                 }
             }
         });
@@ -630,7 +630,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                     mMemberInfoList.addAll(mGroupInfo.getGroupMembers());
                     refreshMemberList();
                 } else {
-                    ToastUtil.shortToast(mContext, "添加失败");
+                    ToastUtil.shortToast(mContext, "添加失敗");
                 }
             }
         });
@@ -832,7 +832,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                                         .setConversation(conv).build());
                                 mContext.startChatActivity(groupId, conv.getTitle(), list.size());
                             } else {
-                                ToastUtil.shortToast(mContext, "创建群组时添加成员失败");
+                                ToastUtil.shortToast(mContext, "創建群組時添加成員失敗");
                             }
                         }
                     });
@@ -840,7 +840,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                     if (mLoadingDialog != null) {
                         mLoadingDialog.dismiss();
                     }
-                    ToastUtil.shortToast(mContext, "创建群组失败");
+                    ToastUtil.shortToast(mContext, "創建群組失敗");
                 }
             }
         });
@@ -867,7 +867,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
 
                                 mContext.startChatActivity(groupId, conv.getTitle(), list.size());
                             } else {
-                                ToastUtil.shortToast(mContext, "创建群组时添加成员失败");
+                                ToastUtil.shortToast(mContext, "創建群組時添加成員失敗");
                             }
                         }
                     });
@@ -875,7 +875,7 @@ public class ChatDetailController implements OnClickListener, OnItemClickListene
                     if (mLoadingDialog != null) {
                         mLoadingDialog.dismiss();
                     }
-                    ToastUtil.shortToast(mContext, "创建群组失败");
+                    ToastUtil.shortToast(mContext, "創建群組失敗");
                 }
             }
         });

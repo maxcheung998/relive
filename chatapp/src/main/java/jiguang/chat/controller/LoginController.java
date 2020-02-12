@@ -147,7 +147,7 @@ public class LoginController implements View.OnClickListener {
                                 SharePreferenceManager.setRegisterName(userId);
                                 SharePreferenceManager.setRegistePass(password);
                                 mContext.startActivity(new Intent(mContext, FinishRegisterActivity.class));
-                                ToastUtil.shortToast(mContext, "注冊成功");
+                                ToastUtil.shortToast(mContext, "註冊成功");
                             } else {
                                 HandleResponseCode.onHandle(mContext, i, false);
                             }
@@ -160,15 +160,15 @@ public class LoginController implements View.OnClickListener {
                 mContext.mLogin_passWord.setText("");
                 JGApplication.registerOrLogin++;
                 if (JGApplication.registerOrLogin % 2 == 0) {
-                    mContext.mBtn_login.setText("注册");
+                    mContext.mBtn_login.setText("註冊");
                     mContext.mNewUser.setText("登入");
-                    mContext.mLogin_register.setText("立即登入");
-                    mContext.mLogin_desc.setText("已有賬號？ ");
+                    mContext.mLogin_register.setText("馬上登入");
+                    mContext.mLogin_desc.setText("已有帳號? ");
                 } else {
                     mContext.mBtn_login.setText("登入");
-                    mContext.mNewUser.setText("新用户");
-                    mContext.mLogin_register.setText("立即注册");
-                    mContext.mLogin_desc.setText("未有賬號? ");
+                    mContext.mNewUser.setText("新用戶");
+                    mContext.mLogin_register.setText("立即註冊");
+                    mContext.mLogin_desc.setText("沒有帳號? ");
                 }
                 break;
         }

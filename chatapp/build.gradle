@@ -13,8 +13,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
-                JPUSH_APPKEY : "1b57ba932523de749accdb06", //appkey.
-                JPUSH_CHANNEL: "developer-default",
+                JPUSH_APPKEY : "1b57ba932523de749accdb06", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
 
         ndk {
