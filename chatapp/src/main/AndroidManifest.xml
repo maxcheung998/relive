@@ -32,9 +32,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".activity.QuestionnaireActivity"></activity>
-        <activity android:name=".activity.SearchForChatRoomActivity"></activity>
-        <activity android:name=".activity.ChatRoomKeeperActivity"></activity>
+        <activity android:name=".activity.QuestionsActivity"></activity>
+        <activity android:name=".activity.SurveyActivity" />
+        <activity android:name=".activity.SearchForChatRoomActivity" />
+        <activity android:name=".activity.ChatRoomKeeperActivity" />
 
         <meta-data
             android:name="AA_DB_NAME"
@@ -58,7 +59,7 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service> <!-- 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey -->
+            android:process=":remote" /> <!-- 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="UAkQeBK84ioVGzYgA1rSWYfuD4xYtpmV" />
@@ -90,7 +91,7 @@
         <activity
             android:name=".activity.ResetPasswordActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseThemes"></activity>
+            android:theme="@style/BaseThemes" />
         <activity
             android:name=".activity.FeedbackActivity"
             android:screenOrientation="portrait"

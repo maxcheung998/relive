@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "header": "Question 1",
+      "question": "1What is your favorite ice cream flavor?",
+      "options": [
+        "Strawberry",
+        "Chocolate",
+        "Vanilla"
+      ]
+    },
+    {
+      "id": "2",
+      "header": "Question 2",
+      "question": "2What is your favorite ice cream flavor?",
+      "options": [
+        "Strawberry2",
+        "Chocolate",
+        "Vanilla"
+      ]
+    },
+    {
+      "id": "3",
+      "header": "Question 3",
+      "question": "3What is your favorite ice cream flavor?",
+      "options": [
+        "Strawberry3",
+        "Chocolate",
+        "Vanilla"
+      ]
+    }
+  ]
+}

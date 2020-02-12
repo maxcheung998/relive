@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="jiguang.chat.activity.QuestionnaireActivity">
-
+    android:background="#fff"
+    tools:context="jiguang.chat.activity.SurveyActivity">
     <include layout="@layout/menu_title_bar_with_button"/>
-
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-    <com.spk.questionnaire.questions.widgets.NoSwipeViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:paddingTop="100dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:text="awefjaiwjeiaofwjifawjeiofawjeoawefawefawefawefawefawdsfasdf" />
 
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Start" />
 
 
 </LinearLayout>

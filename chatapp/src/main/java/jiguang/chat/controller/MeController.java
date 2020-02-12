@@ -11,16 +11,14 @@ import jiguang.chat.R;
 import jiguang.chat.activity.AboutJChatActivity;
 import jiguang.chat.activity.FeedbackActivity;
 import jiguang.chat.activity.PersonalActivity;
-import jiguang.chat.activity.QuestionnaireActivity;
 import jiguang.chat.activity.ResetPasswordActivity;
+import jiguang.chat.activity.SurveyActivity;
 import jiguang.chat.activity.fragment.MeFragment;
 import jiguang.chat.utils.DialogCreator;
 
-/**
- * Created by ${chenyn} on 2017/2/21.
- */
 
 public class MeController implements View.OnClickListener {
+    private static final int QUESTIONNAIRE_REQUEST = 2018;
     public static final String PERSONAL_PHOTO = "personal_photo";
     private MeFragment mContext;
     private Dialog mDialog;
@@ -50,7 +48,7 @@ public class MeController implements View.OnClickListener {
                 mContext.startActivity(new Intent(mContext.getContext(), AboutJChatActivity.class));
                 break;
             case R.id.questions:
-                mContext.startActivity(new Intent(mContext.getContext(), QuestionnaireActivity.class));
+                mContext.startActivity(new Intent(mContext.getContext(), SurveyActivity.class));
                 break;
             case R.id.exit:
                 View.OnClickListener listener = new View.OnClickListener() {

@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.relive.test"
         minSdkVersion 18
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 61
         versionName "2.3.0"
         multiDexEnabled true
