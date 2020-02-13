@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff"
+    android:background="@android:color/white"
     tools:context="jiguang.chat.activity.SurveyActivity">
     <include layout="@layout/menu_title_bar_with_button"/>
 

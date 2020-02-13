@@ -2,32 +2,29 @@
   "questions": [
     {
       "id": "1",
-      "header": "Question 1",
-      "question": "1What is your favorite ice cream flavor?",
+      "question": "覺得手上工作太多，無法應付。",
       "options": [
-        "Strawberry",
-        "Chocolate",
-        "Vanilla"
+        "從未發生",
+        "間中發生",
+        "經常發生"
       ]
     },
     {
       "id": "2",
-      "header": "Question 2",
-      "question": "2What is your favorite ice cream flavor?",
+      "question": "覺得時間不夠要，所以要分秒必爭。例如過馬路時衝紅燈，走路和說話的節奏很快速。",
       "options": [
-        "Strawberry2",
-        "Chocolate",
-        "Vanilla"
+        "從未發生",
+        "間中發生",
+        "經常發生"
       ]
     },
     {
       "id": "3",
-      "header": "Question 3",
-      "question": "3What is your favorite ice cream flavor?",
+      "question": "覺得沒有時間消遣，終日記掛著工作。",
       "options": [
-        "Strawberry3",
-        "Chocolate",
-        "Vanilla"
+        "從未發生",
+        "間中發生",
+        "經常發生"
       ]
     }
   ]

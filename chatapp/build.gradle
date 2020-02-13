@@ -5,7 +5,7 @@ android {
 
     defaultConfig {
         applicationId "com.relive.test"
-        minSdkVersion 18
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 61
         versionName "2.3.0"

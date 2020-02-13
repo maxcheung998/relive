@@ -1,5 +1,8 @@
 package jiguang.chat.activity;
 
+import android.app.Activity;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -34,6 +37,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
     private JSONArray mAnswer;
     private RadioGroup mRadioGP;
     private int mStart_count  = 0;
+    private TextView mCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
         mNext_question = (Button) findViewById(R.id.qnext);
         mQuit = (Button) findViewById(R.id.buttonquit);
         mRadioGP = (RadioGroup) findViewById(R.id.answersgrp);
+        mCounter = (TextView) findViewById(R.id.q_counter);
     }
 
     private void initListener() {
@@ -69,13 +74,13 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
             e.printStackTrace();
         }
 
-
     }
 
     private void SetQuestion(JSONObject mQuestionObj) {
        // RadioGroup rg = new RadioGroup(this); //create the RadioGroup
         mRadioGP.setOrientation(RadioGroup.VERTICAL);//or RadioGroup.HORIZONTAL
         try {
+            mCounter.setText((mStart_count+1)+"/"+mQuestion_count);
             String title = mQuestionObj.getString("question");
             mQuestion_title.setText(title);
             Log.d("d5",title);
@@ -87,6 +92,8 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
                 rb[i]  = new RadioButton(this);
                 rb[i].setText(jsn);
                 rb[i].setId(i);
+                rb[i].setTextColor(ContextCompat.getColorStateList(this, R.color.radiogroup_selector));
+                rb[i].setButtonTintList(ContextCompat.getColorStateList(this, R.color.gray));
                 Log.d("d0", String.valueOf(rb[i]));
                 mRadioGP.addView(rb[i]);
             }
