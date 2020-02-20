@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,14 +12,14 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="100dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="20dp"
-        android:textColor="#000"
+        android:layout_height="251dp"
         android:gravity="center"
-        android:text="awefjaiwjeiaofwjifawjeiofawjeoawefawefawefawefawefawdsfasdf" />
+        android:paddingStart="20dp"
+        android:paddingTop="100dp"
+        android:paddingEnd="20dp"
+        android:text="請完成整份問卷以作分析用途 - DASS21"
+        android:textColor="#000"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btn_sure"
@@ -26,6 +27,12 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:text="Start" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:src="@tools:sample/avatars" />
 
 
 </LinearLayout>
