@@ -18,9 +18,9 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="14dp"
             android:clickable="true"
-            android:text="JChat"
+            android:text="MHW"
             android:textColor="#fff"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/new_user"
@@ -30,9 +30,9 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="12.33dp"
             android:clickable="true"
-            android:text="新用户"
+            android:text="新用戶"
             android:textColor="#fff"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
     </RelativeLayout>
 
