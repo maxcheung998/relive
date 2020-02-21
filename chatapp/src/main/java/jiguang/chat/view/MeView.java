@@ -124,7 +124,7 @@ public class MeView extends LinearLayout implements SlipButton.OnChangedListener
                         if (status == 0) {
                         } else {
                             mSet_noDisturb.setChecked(!checkState);
-                            ToastUtil.shortToast(mContext, "设置失败");
+                            ToastUtil.shortToast(mContext, "設定失敗");
                         }
                     }
                 });

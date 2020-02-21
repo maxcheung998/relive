@@ -46,7 +46,7 @@ public class ChatbotActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        Uri uri = Uri.parse("https://bot.dialogflow.com/b2a897fa-3eb6-48ec-bcf1-dfab0e830c94");
+        Uri uri = Uri.parse("https://bot.dialogflow.com/3ae3fbff-c653-447b-be85-8ccc27153362\n");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
 
