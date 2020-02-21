@@ -108,15 +108,4 @@ public class MainActivity extends FragmentActivity {
         }
     };
 
-//    private RationaleListener rationaleListener = (requestCode, rationale) -> {
-//        AlertDialog.newBuilder(this)
-//                .setMessage("正常使用JChat需要您打开相关权限.")
-//                .setPositiveButton("是", (dialog, which) -> {
-//                    rationale.resume();
-//                })
-//                .setNegativeButton("否", (dialog, which) -> {
-//                    rationale.cancel();
-//                }).show();
-//    };
-
 }

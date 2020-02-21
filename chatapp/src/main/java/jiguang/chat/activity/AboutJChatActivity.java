@@ -38,7 +38,7 @@ public class AboutJChatActivity extends BaseActivity {
         mJiguang = (RelativeLayout) findViewById(R.id.jiguang);
     }
 
-    //跳转极光官网
+    //Jump to OUHK
     public void initData() {
         mJiguang.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -85,7 +85,7 @@
 
         <TextView
             style="@style/info_left_style"
-            android:text="官方網站" />
+            android:text="OUHK官網" />
 
         <ImageView
             android:layout_width="wrap_content"
