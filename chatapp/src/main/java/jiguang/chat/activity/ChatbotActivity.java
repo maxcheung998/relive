@@ -44,11 +44,11 @@ public class ChatbotActivity extends BaseActivity implements View.OnClickListene
         mBtn_start.setOnClickListener(this);
     }
 
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse("https://bot.dialogflow.com/b2a897fa-3eb6-48ec-bcf1-dfab0e830c94");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+    @Override
+    public void onClick(View v) {
+        Uri uri = Uri.parse("https://bot.dialogflow.com/b2a897fa-3eb6-48ec-bcf1-dfab0e830c94");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
 
-            }
+    }
 }

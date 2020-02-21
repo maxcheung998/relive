@@ -32,15 +32,15 @@ public class MeFragment extends BaseFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mContext = this.getActivity();
-        LayoutInflater layoutInflater = getActivity().getLayoutInflater();
-        mRootView = layoutInflater.inflate(R.layout.fragment_me,
-                (ViewGroup) getActivity().findViewById(R.id.main_view), false);
-        mMeView = (MeView) mRootView.findViewById(R.id.me_view);
-        mMeView.initModule(mDensity, mWidth);
-        mMeController = new MeController(this, mWidth);
-        mMeView.setListener(mMeController);
+            super.onCreate(savedInstanceState);
+            mContext = this.getActivity();
+            LayoutInflater layoutInflater = getActivity().getLayoutInflater();
+            mRootView = layoutInflater.inflate(R.layout.fragment_me,
+                    (ViewGroup) getActivity().findViewById(R.id.main_view), false);
+            mMeView = (MeView) mRootView.findViewById(R.id.me_view);
+            mMeView.initModule(mDensity, mWidth);
+            mMeController = new MeController(this, mWidth);
+            mMeView.setListener(mMeController);
     }
 
 

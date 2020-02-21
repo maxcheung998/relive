@@ -53,6 +53,7 @@ public class MeController implements View.OnClickListener {
                 break;
             case R.id.chatbot:
                 mContext.startActivity(new Intent(mContext.getContext(), ChatbotActivity.class));
+                break;
             case R.id.exit:
                 View.OnClickListener listener = new View.OnClickListener() {
                     @Override

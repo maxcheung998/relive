@@ -34,6 +34,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".activity.QuestionsActivity"></activity>
         <activity android:name=".activity.SurveyActivity" />
+        <activity android:name=".activity.ChatbotActivity" />
         <activity android:name=".activity.SearchForChatRoomActivity" />
         <activity android:name=".activity.ChatRoomKeeperActivity" />
 
@@ -372,6 +373,7 @@
             android:name="com.activeandroid.content.ContentProvider"
             android:authorities="${applicationId}"
             android:exported="false" />
+
     </application>
 
 </manifest>
