@@ -90,30 +90,6 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/add_open_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/launch_friend">
-
-            <ImageView
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/open_group"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="48dp"
-                android:text="加入公開群組"
-                android:textColor="#fff"
-                android:textSize="16sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/ll_saoYiSao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

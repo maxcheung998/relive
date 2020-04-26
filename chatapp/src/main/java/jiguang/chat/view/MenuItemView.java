@@ -13,7 +13,6 @@ public class MenuItemView {
     private RelativeLayout mAddFriendLl;
     private RelativeLayout mSendMsgLl;
     private RelativeLayout mLl_saoYiSao;
-    private RelativeLayout mAdd_open_group;
 
     public MenuItemView(View view) {
         this.mView = view;
@@ -24,7 +23,6 @@ public class MenuItemView {
         mAddFriendLl = mView.findViewById(R.id.add_friend_with_confirm_ll);
         mSendMsgLl = mView.findViewById(R.id.send_message_ll);
         mLl_saoYiSao = mView.findViewById(R.id.ll_saoYiSao);
-        mAdd_open_group = mView.findViewById(R.id.add_open_group);
     }
 
     public void setListeners(View.OnClickListener listener) {
@@ -32,7 +30,6 @@ public class MenuItemView {
         mAddFriendLl.setOnClickListener(listener);
         mSendMsgLl.setOnClickListener(listener);
         mLl_saoYiSao.setOnClickListener(listener);
-        mAdd_open_group.setOnClickListener(listener);
     }
 
     public void showAddFriendDirect() {

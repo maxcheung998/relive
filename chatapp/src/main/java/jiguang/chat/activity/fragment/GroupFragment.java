@@ -21,16 +21,11 @@ import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
 import jiguang.chat.R;
 import jiguang.chat.activity.ApplyGroupInfoActivity;
-import jiguang.chat.activity.GroupInfoActivity;
 import jiguang.chat.adapter.GroupVerificationAdapter;
 import jiguang.chat.application.JGApplication;
 import jiguang.chat.database.GroupApplyEntry;
 import jiguang.chat.database.RefuseGroupEntry;
 import jiguang.chat.database.UserEntry;
-
-/**
- * Created by ${chenyn} on 2017/11/7.
- */
 
 public class GroupFragment extends BaseFragment {
     private Activity mContext;
@@ -70,11 +65,7 @@ public class GroupFragment extends BaseFragment {
                 intent.putExtra("reason", entry.reason);
                 startActivity(intent);
             }else {
-                intent.setClass(mContext, GroupInfoActivity.class);
-                RefuseGroupEntry entry = (RefuseGroupEntry) itemAtPosition;
-                intent.setFlags(1);
-                intent.putExtra("groupId", entry.groupId);
-                startActivity(intent);
+
             }
         });
 
