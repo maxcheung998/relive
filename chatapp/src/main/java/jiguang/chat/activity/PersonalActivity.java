@@ -62,7 +62,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
     private ChoosePhoto mChoosePhoto;
     private UserInfo mMyInfo;
     private TextView mTv_userName;
-    private RelativeLayout mRl_zxing;
 
 
     @Override
@@ -131,7 +130,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
         mRl_gender.setOnClickListener(this);
         mRl_nickName.setOnClickListener(this);
         mIv_photo.setOnClickListener(this);
-        mRl_zxing.setOnClickListener(this);
     }
 
     private void initView() {
@@ -147,7 +145,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
         mTv_nickName = (TextView) findViewById(R.id.tv_nickName);
         mIv_photo = (ImageView) findViewById(R.id.iv_photo);
         mTv_userName = (TextView) findViewById(R.id.tv_userName);
-        mRl_zxing = (RelativeLayout) findViewById(R.id.rl_zxing);
 
         mChoosePhoto = new ChoosePhoto();
         mChoosePhoto.setPortraitChangeListener(PersonalActivity.this, mIv_photo, 2);
@@ -233,16 +230,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
                 dialog = new SelectAddressDialog(PersonalActivity.this,
                         PersonalActivity.this, SelectAddressDialog.STYLE_THREE, null, mMyInfo);
                 dialog.showDialog();
-                break;
-            case R.id.rl_zxing:
-                //二维码
-                Intent intent = new Intent(PersonalActivity.this, Person2CodeActivity.class);
-                intent.putExtra("appkey", mMyInfo.getAppKey());
-                intent.putExtra("username", mMyInfo.getUserName());
-                if (mMyInfo.getAvatarFile() != null) {
-                    intent.putExtra("avatar", mMyInfo.getAvatarFile().getAbsolutePath());
-                }
-                startActivity(intent);
                 break;
             default:
                 break;
