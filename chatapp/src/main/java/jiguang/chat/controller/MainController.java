@@ -26,7 +26,6 @@ public class MainController implements View.OnClickListener, ViewPager.OnPageCha
     private ConversationListFragment mConvListFragment;
     private MeFragment mMeFragment;
     private ContactsFragment mContactsFragment;
-    private ChatRoomFragment mChatRoomFragment;
 
 
     public MainController(MainView mMainView, MainActivity context) {
@@ -39,12 +38,10 @@ public class MainController implements View.OnClickListener, ViewPager.OnPageCha
         final List<Fragment> fragments = new ArrayList<>();
         // init Fragment
         mConvListFragment = new ConversationListFragment();
-        mChatRoomFragment = new ChatRoomFragment();
         mContactsFragment = new ContactsFragment();
         mMeFragment = new MeFragment();
 
         fragments.add(mConvListFragment);
-        fragments.add(mChatRoomFragment);
         fragments.add(mContactsFragment);
         fragments.add(mMeFragment);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(mContext.getSupportFragmentManger(),
@@ -59,14 +56,11 @@ public class MainController implements View.OnClickListener, ViewPager.OnPageCha
             case R.id.actionbar_msg_btn:
                 mMainView.setCurrentItem(0, false);
                 break;
-            case R.id.actionbar_chatroom_btn:
+            case R.id.actionbar_contact_btn:
                 mMainView.setCurrentItem(1, false);
                 break;
-            case R.id.actionbar_contact_btn:
-                mMainView.setCurrentItem(2, false);
-                break;
             case R.id.actionbar_me_btn:
-                mMainView.setCurrentItem(3, false);
+                mMainView.setCurrentItem(2, false);
                 break;
         }
     }
