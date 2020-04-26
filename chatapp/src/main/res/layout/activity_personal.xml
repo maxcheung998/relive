@@ -52,7 +52,7 @@
 
         <TextView
             style="@style/info_left_txt_style"
-            android:text="暱稱" />
+            android:text="簡稱" />
 
         <TextView
             android:id="@+id/tv_nickName"
