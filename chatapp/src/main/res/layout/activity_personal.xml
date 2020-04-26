@@ -258,45 +258,6 @@
         android:layout_marginRight="14dp"
         android:background="#FFE8EDF3"/>
 
-    <RelativeLayout
-        android:id="@+id/sign"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:background="#fff">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="14dp"
-            android:src="@drawable/sign_logo"/>
-
-        <TextView
-            style="@style/info_left_txt_style"
-            android:text="個性簽名" />
-
-        <TextView
-            android:id="@+id/tv_sign"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:paddingLeft="122.67dp"
-            android:paddingRight="27.33dp"
-            android:textColor="#FF999999"
-            android:textSize="14sp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="13.93dp"
-            android:background="@drawable/arrow"/>
-    </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

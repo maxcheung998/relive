@@ -25,7 +25,7 @@ public class NickSignActivity extends BaseActivity {
     public static final String DESC = "desc";
 
     public enum Type {
-        GROUP_NAME, GROUP_DESC, PERSON_SIGN, PERSON_NICK, CHAT_ROOM_NAME, CHAT_ROOM_DESC;
+        GROUP_NAME, GROUP_DESC, PERSON_NICK, CHAT_ROOM_NAME, CHAT_ROOM_DESC;
     }
 
     private EditText mEd_sign;
@@ -45,9 +45,6 @@ public class NickSignActivity extends BaseActivity {
         Type type = (Type) intent.getSerializableExtra(TYPE);
         int count = intent.getIntExtra(COUNT, 0);
         switch (type) {
-            case PERSON_SIGN:
-                initViewSign("個人簽名", count);
-                break;
             case PERSON_NICK:
                 initViewNick("修改暱稱", count);
                 break;
@@ -99,10 +96,6 @@ public class NickSignActivity extends BaseActivity {
                     case PERSON_NICK:
                         intent.putExtra(PersonalActivity.NICK_NAME_KEY, sign);
                         setResult(PersonalActivity.NICK_NAME, intent);//4
-                        break;
-                    case PERSON_SIGN:
-                        intent.putExtra(PersonalActivity.SIGN_KEY, sign);
-                        setResult(PersonalActivity.SIGN, intent);//1
                         break;
                     case GROUP_DESC:
                         intent.putExtra(ChatDetailActivity.GROUP_DESC_KEY, sign);

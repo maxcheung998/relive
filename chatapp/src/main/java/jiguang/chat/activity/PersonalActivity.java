@@ -33,10 +33,6 @@ import jiguang.chat.utils.citychoose.view.myinterface.SelectAddressInterface;
 import jiguang.chat.utils.photochoose.ChoosePhoto;
 import jiguang.chat.utils.photochoose.PhotoUtils;
 
-/**
- * Created by ${chenyn} on 2017/2/23.
- */
-
 public class PersonalActivity extends BaseActivity implements SelectAddressInterface, View.OnClickListener {
 
     public static final int SIGN = 1;
@@ -56,7 +52,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
 
     private TextView mTv_birthday;
     private TextView mTv_gender;
-    private RelativeLayout mSign;
     private TextView mTv_sign;
     private RelativeLayout mRl_nickName;
 
@@ -97,7 +92,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
             mTv_nickName.setText(mMyInfo.getNickname());
             SharePreferenceManager.setRegisterUsername(mMyInfo.getNickname());
             mTv_userName.setText("用戶名:" + mMyInfo.getUserName());
-            mTv_sign.setText(mMyInfo.getSignature());
             UserInfo.Gender gender = mMyInfo.getGender();
             if (gender != null) {
                 if (gender.equals(UserInfo.Gender.male)) {
@@ -135,7 +129,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
         mRl_cityChoose.setOnClickListener(this);
         mRl_birthday.setOnClickListener(this);
         mRl_gender.setOnClickListener(this);
-        mSign.setOnClickListener(this);
         mRl_nickName.setOnClickListener(this);
         mIv_photo.setOnClickListener(this);
         mRl_zxing.setOnClickListener(this);
@@ -149,7 +142,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
         mRl_birthday = (RelativeLayout) findViewById(R.id.rl_birthday);
         mTv_birthday = (TextView) findViewById(R.id.tv_birthday);
         mTv_gender = (TextView) findViewById(R.id.tv_gender);
-        mSign = (RelativeLayout) findViewById(R.id.sign);
         mTv_sign = (TextView) findViewById(R.id.tv_sign);
         mRl_nickName = (RelativeLayout) findViewById(R.id.rl_nickName);
         mTv_nickName = (TextView) findViewById(R.id.tv_nickName);
@@ -195,13 +187,6 @@ public class PersonalActivity extends BaseActivity implements SelectAddressInter
                 intent.putExtra(NickSignActivity.COUNT, NICK_COUNT);
                 intent.putExtra(NickSignActivity.DESC, mMyInfo.getNickname());
                 startActivityForResult(intent, NICK_NAME);
-                break;
-            case R.id.sign:
-                //签名
-                intent.putExtra(NickSignActivity.TYPE, NickSignActivity.Type.PERSON_SIGN);
-                intent.putExtra(NickSignActivity.COUNT, SIGN_COUNT);
-                intent.putExtra(NickSignActivity.DESC, mMyInfo.getSignature());
-                startActivityForResult(intent, SIGN);
                 break;
             case R.id.rl_gender:
                 //弹出性别选择器
