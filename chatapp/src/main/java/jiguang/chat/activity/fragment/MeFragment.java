@@ -20,10 +20,6 @@ import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.view.MeView;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
-
 public class MeFragment extends BaseFragment {
     private View mRootView;
     public MeView mMeView;

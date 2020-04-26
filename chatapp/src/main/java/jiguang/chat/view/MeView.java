@@ -18,18 +18,12 @@ import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 
-/**
- * Created by ${chenyn} on 2017/2/21.
- */
-
-public class MeView extends LinearLayout implements SlipButton.OnChangedListener{
+public class MeView extends LinearLayout {
     private Context mContext;
     private TextView mSignatureTv;
     private TextView mNickNameTv;
     private SelectableRoundedImageView mTakePhotoBtn;
     private RelativeLayout mSet_pwd;
-    public SlipButton mSet_noDisturb;
-    private RelativeLayout mOpinion;
     private RelativeLayout mQuestions;
     private RelativeLayout mChatbot;
     private RelativeLayout mAbout;
@@ -50,13 +44,10 @@ public class MeView extends LinearLayout implements SlipButton.OnChangedListener
         mNickNameTv = (TextView) findViewById(R.id.nickName);
         mSignatureTv = (TextView) findViewById(R.id.signature);
         mSet_pwd = (RelativeLayout) findViewById(R.id.setPassword);
-        mSet_noDisturb = (SlipButton) findViewById(R.id.btn_noDisturb);
-        mOpinion = (RelativeLayout) findViewById(R.id.opinion);
         mQuestions = (RelativeLayout) findViewById(R.id.questions);
         mAbout = (RelativeLayout) findViewById(R.id.about);
         mExit = (RelativeLayout) findViewById(R.id.exit);
         mRl_personal = (RelativeLayout) findViewById(R.id.rl_personal);
-        mSet_noDisturb.setOnChangedListener(R.id.btn_noDisturb, this);
         mChatbot = (RelativeLayout) findViewById(R.id.chatbot);
         mWidth = width;
         mHeight = (int) (190 * density);
@@ -64,31 +55,16 @@ public class MeView extends LinearLayout implements SlipButton.OnChangedListener
 
         final Dialog dialog = DialogCreator.createLoadingDialog(mContext, mContext.getString(R.string.jmui_loading));
         dialog.show();
-        //初始化是否全局免打扰
-        JMessageClient.getNoDisturbGlobal(new IntegerCallback() {
-            @Override
-            public void gotResult(int responseCode, String responseMessage, Integer value) {
-                dialog.dismiss();
-                if (responseCode == 0) {
-                    mSet_noDisturb.setChecked(value == 1);
-                } else {
-                    ToastUtil.shortToast(mContext, responseMessage);
-                }
-            }
-        });
-
 
     }
 
     public void setListener(OnClickListener onClickListener) {
         mSet_pwd.setOnClickListener(onClickListener);
-        mOpinion.setOnClickListener(onClickListener);
         mQuestions.setOnClickListener(onClickListener);
         mChatbot.setOnClickListener(onClickListener);
         mAbout.setOnClickListener(onClickListener);
         mExit.setOnClickListener(onClickListener);
         mRl_personal.setOnClickListener(onClickListener);
-
 
     }
 
@@ -110,26 +86,5 @@ public class MeView extends LinearLayout implements SlipButton.OnChangedListener
         mSignatureTv.setText(myInfo.getSignature());
     }
 
-    @Override
-    public void onChanged(int id, final boolean checkState) {
-        switch (id) {
-            case R.id.btn_noDisturb:
-                final Dialog loadingDialog = DialogCreator.createLoadingDialog(mContext,
-                        mContext.getString(R.string.jmui_loading));
-                loadingDialog.show();
-                JMessageClient.setNoDisturbGlobal(checkState ? 1 : 0, new BasicCallback() {
-                    @Override
-                    public void gotResult(int status, String desc) {
-                        loadingDialog.dismiss();
-                        if (status == 0) {
-                        } else {
-                            mSet_noDisturb.setChecked(!checkState);
-                            ToastUtil.shortToast(mContext, "設定失敗");
-                        }
-                    }
-                });
-                break;
-        }
-    }
 
 }

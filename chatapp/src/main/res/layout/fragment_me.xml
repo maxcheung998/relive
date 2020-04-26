@@ -121,47 +121,12 @@
                 android:layout_marginRight="14dp"
                 android:background="#FFE8EDF3"/>
 
-            <RelativeLayout
-                style="@style/SettingItemStyle">
-
-                <TextView
-                    style="@style/info_left_style"
-                    android:text="免打擾" />
-
-                <jiguang.chat.view.SlipButton
-                    android:id="@+id/btn_noDisturb"
-                    android:layout_width="46dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="14dp"/>
-            </RelativeLayout>
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="14dp"
                 android:layout_marginRight="14dp"
                 android:background="#FFE8EDF3"/>
-
-            <RelativeLayout
-                android:id="@+id/opinion"
-                style="@style/SettingItemStyle">
-
-                <TextView
-                    android:id="@+id/logout_tv"
-                    style="@style/info_left_style"
-                    android:text="意見反饋 " />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="13.93dp"
-                    android:background="@drawable/arrow"/>
-
-            </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"

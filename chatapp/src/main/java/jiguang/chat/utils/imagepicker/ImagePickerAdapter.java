@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jiguang.chat.R;
-import jiguang.chat.activity.FeedbackActivity;
 import jiguang.chat.utils.imagepicker.bean.ImageItem;
 
 
@@ -88,7 +87,7 @@ public class ImagePickerAdapter extends RecyclerView.Adapter<ImagePickerAdapter.
             ImageItem item = mData.get(position);
             if (isAdded && position == getItemCount() - 1) {
                 iv_img.setImageResource(R.drawable.selector_image_add);
-                clickPosition = FeedbackActivity.IMAGE_ITEM_ADD;
+                //clickPosition = FeedbackActivity.IMAGE_ITEM_ADD;
             } else {
                 ImagePicker.getInstance().getImageLoader().displayImages((Activity) mContext, item.path, iv_img, 0, 0);
                 clickPosition = position;

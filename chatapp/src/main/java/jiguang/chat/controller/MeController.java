@@ -10,7 +10,6 @@ import android.view.WindowManager;
 import jiguang.chat.R;
 import jiguang.chat.activity.AboutJChatActivity;
 import jiguang.chat.activity.ChatbotActivity;
-import jiguang.chat.activity.FeedbackActivity;
 import jiguang.chat.activity.PersonalActivity;
 import jiguang.chat.activity.ResetPasswordActivity;
 import jiguang.chat.activity.SurveyActivity;
@@ -41,9 +40,6 @@ public class MeController implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.setPassword:
                 mContext.startActivity(new Intent(mContext.getContext(), ResetPasswordActivity.class));
-                break;
-            case R.id.opinion://意見反映
-                mContext.startActivity(new Intent(mContext.getContext(), FeedbackActivity.class));
                 break;
             case R.id.about:
                 mContext.startActivity(new Intent(mContext.getContext(), AboutJChatActivity.class));
