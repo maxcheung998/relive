@@ -15,54 +15,33 @@ import android.widget.Button;
 import jiguang.chat.R;
 
 
-/**
- * [底部弹出dialog]
- *
- **/
 public class BottomMenuDialog extends Dialog implements View.OnClickListener {
 
-    private Button photographBtn;
     private Button localPhotosBtn;
     private Button cancelBtn;
 
-    private View.OnClickListener confirmListener;
     private View.OnClickListener cancelListener;
     private View.OnClickListener middleListener;
 
-    private String confirmText;
     private String middleText;
     private String cancelText;
 
-    /**
-     * @param context
-     */
     public BottomMenuDialog(Context context) {
         super(context, R.style.dialogFullscreen);
     }
 
-    /**
-     * @param context
-     * @param theme
-     */
     public BottomMenuDialog(Context context, int theme) {
         super(context, theme);
     }
 
-    /**
-     * @param context
-     */
     public BottomMenuDialog(Context context, String confirmText, String middleText) {
         super(context, R.style.dialogFullscreen);
-        this.confirmText = confirmText;
         this.middleText = middleText;
     }
 
-    /**
-     * @param context
-     */
+
     public BottomMenuDialog(Context context, String confirmText, String middleText, String cancelText) {
         super(context, R.style.dialogFullscreen);
-        this.confirmText = confirmText;
         this.middleText = middleText;
         this.cancelText = cancelText;
     }
@@ -79,13 +58,9 @@ public class BottomMenuDialog extends Dialog implements View.OnClickListener {
 
         window.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
-        photographBtn = (Button) findViewById(R.id.photographBtn);
         localPhotosBtn = (Button) findViewById(R.id.localPhotosBtn);
         cancelBtn = (Button) findViewById(R.id.cancelBtn);
 
-        if (!TextUtils.isEmpty(confirmText)) {
-            photographBtn.setText(confirmText);
-        }
         if (!TextUtils.isEmpty(middleText)) {
             localPhotosBtn.setText(middleText);
         }
@@ -94,7 +69,6 @@ public class BottomMenuDialog extends Dialog implements View.OnClickListener {
         }
 
         cancelBtn.setOnClickListener(this);
-        photographBtn.setOnClickListener(this);
         localPhotosBtn.setOnClickListener(this);
     }
 
@@ -108,12 +82,6 @@ public class BottomMenuDialog extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.photographBtn) {
-            if (confirmListener != null) {
-                confirmListener.onClick(v);
-            }
-            return;
-        }
         if (id == R.id.localPhotosBtn) {
             if (middleListener != null) {
                 middleListener.onClick(v);
@@ -129,13 +97,7 @@ public class BottomMenuDialog extends Dialog implements View.OnClickListener {
         }
     }
 
-    public View.OnClickListener getConfirmListener() {
-        return confirmListener;
-    }
 
-    public void setConfirmListener(View.OnClickListener confirmListener) {
-        this.confirmListener = confirmListener;
-    }
 
     public View.OnClickListener getCancelListener() {
         return cancelListener;

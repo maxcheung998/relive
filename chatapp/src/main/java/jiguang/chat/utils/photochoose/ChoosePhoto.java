@@ -21,10 +21,6 @@ import jiguang.chat.utils.HandleResponseCode;
 import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.utils.ToastUtil;
 
-/**
- * Created by ${chenyn} on 2017/3/3.
- */
-
 public class ChoosePhoto {
     public PhotoUtils photoUtils;
     private BottomMenuDialog mDialog;
@@ -42,15 +38,6 @@ public class ChoosePhoto {
         }
 
         mDialog = new BottomMenuDialog(context);
-        mDialog.setConfirmListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                if (mDialog != null && mDialog.isShowing()) {
-                    mDialog.dismiss();
-                }
-                photoUtils.takePicture((Activity) context);
-            }
-        });
         mDialog.setMiddleListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -85,7 +72,7 @@ public class ChoosePhoto {
                             if (responseCode == 0) {
                                 ToastUtil.shortToast(mContext, "更新成功");
                             } else {
-                                ToastUtil.shortToast(mContext, "更新失败" + responseMessage);
+                                ToastUtil.shortToast(mContext, "更新失敗" + responseMessage);
                             }
                         }
                     });
