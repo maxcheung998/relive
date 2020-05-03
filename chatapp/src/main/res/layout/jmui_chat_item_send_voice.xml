@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="@string/jmui_voice_length"
-                android:textColor="#4D9999"
+                android:textColor="#068D10"
                 android:textSize="16sp"/>
         </FrameLayout>
 

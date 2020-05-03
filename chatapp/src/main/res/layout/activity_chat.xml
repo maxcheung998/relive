@@ -92,7 +92,7 @@
                     android:layout_gravity="end"
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="100dp"
-                    android:background="#2DD0CF"
+                    android:background="#068D10"
                     android:text="有人@我"
                     android:textColor="#fff"
                     android:visibility="gone"/>

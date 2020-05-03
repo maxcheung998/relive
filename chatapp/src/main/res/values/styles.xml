@@ -332,14 +332,12 @@
     </style>
 
     <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
-        <item name="android:statusBarColor">#FF2DD0CF</item>
+        <item name="android:statusBarColor">#000</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <!--这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效
-    statusBarColor这个属性可以改变系统状态栏颜色-->
     <style name="BaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
-        <item name="android:statusBarColor">#FF2DD0CF</item>
+        <item name="android:statusBarColor">#000</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
@@ -349,7 +347,7 @@
     </style>
 
     <style name="BaseThemes" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:statusBarColor">#FF2DD0CF</item>
+        <item name="android:statusBarColor">#000</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 

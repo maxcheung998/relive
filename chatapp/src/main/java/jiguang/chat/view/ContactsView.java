@@ -21,10 +21,6 @@ import jiguang.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 
-/**
- * Created by ${chenyn} on 2017/3/13.
- */
-
 public class ContactsView extends LinearLayout {
     private StickyListHeadersListView mListView;
     private SideBar mSideBar;
@@ -33,8 +29,6 @@ public class ContactsView extends LinearLayout {
     private ImageButton mIb_goToAddFriend;
     private TextView mLetterHintTv;
     private LinearLayout mVerify_ll;
-    private LinearLayout mGroup_ll;
-    private TextView mGroup_verification_num;
     private TextView mNewFriendNum;
     private LayoutInflater mInflater;
     private LinearLayout mSearch_title;
@@ -65,12 +59,9 @@ public class ContactsView extends LinearLayout {
 
         View header = mInflater.inflate(R.layout.contact_list_header, null);
         mVerify_ll = (LinearLayout) header.findViewById(R.id.verify_ll);
-        mGroup_ll = (LinearLayout) header.findViewById(R.id.group_ll);
-        mGroup_verification_num = (TextView) header.findViewById(R.id.group_verification_num);
         mNewFriendNum = (TextView) header.findViewById(R.id.friend_verification_num);
         mSearch_title = (LinearLayout) header.findViewById(R.id.search_title);
         mView_line = header.findViewById(R.id.view_line);
-        mGroup_verification_num.setVisibility(INVISIBLE);
 
         RelativeLayout loadingHeader = (RelativeLayout) mInflater.inflate(R.layout.jmui_drop_down_list_header, null);
         mLoadingIv = (ImageView) loadingHeader.findViewById(R.id.jmui_loading_img);
@@ -91,7 +82,6 @@ public class ContactsView extends LinearLayout {
     public void setListener(ContactsController contactsController) {
         mIb_goToAddFriend.setOnClickListener(contactsController);
         mVerify_ll.setOnClickListener(contactsController);
-        mGroup_ll.setOnClickListener(contactsController);
         mSearch_title.setOnClickListener(contactsController);
     }
 
@@ -135,13 +125,6 @@ public class ContactsView extends LinearLayout {
         mLoadingTv.setVisibility(View.GONE);
 
     }
-
-    /**
-     * desc:当没有好友时候在群组下面画一条线.以区分和好友列表
-     * 当有好友时候,字母索充当分割线
-     *
-     * 如果不这样设置的话,当有好友时候还会显示view线,这样ui界面不太好看
-     */
 
     public void showLine() {
         mView_line.setVisibility(View.VISIBLE);
