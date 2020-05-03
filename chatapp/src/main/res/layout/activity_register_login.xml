@@ -9,7 +9,7 @@
         android:id="@+id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#2DD0CF"
+        android:background="@color/header_title"
         android:visibility="gone">
 
         <TextView
@@ -103,7 +103,7 @@
                     android:layout_height="0.67dp"
                     android:layout_below="@id/login_userName"
                     android:layout_marginTop="10dp"
-                    android:background="#57D9D9"/>
+                    android:background="#068D10"/>
 
 
             </RelativeLayout>
@@ -145,7 +145,7 @@
                     android:layout_height="0.67dp"
                     android:layout_below="@id/login_passWord"
                     android:layout_marginTop="10dp"
-                    android:background="#57D9D9"/>
+                    android:background="#068D10"/>
 
             </RelativeLayout>
 
@@ -214,7 +214,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:text="立即註冊"
-            android:textColor="#57D9D9"
+            android:textColor="#068D10"
             android:textSize="12sp" />
 
     </LinearLayout>

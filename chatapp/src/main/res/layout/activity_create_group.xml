@@ -9,7 +9,7 @@
     <RelativeLayout android:id="@+id/menu_title_bar"
         android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@color/jmui_jpush_blue">
+                    android:background="@color/header_title">
 
         <ImageButton
             android:id="@+id/jmui_cancel_btn"

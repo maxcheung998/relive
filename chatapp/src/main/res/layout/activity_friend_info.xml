@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="48.5dp"
-        android:background="@color/jmui_jpush_blue">
+        android:background="@color/header_title">
 
         <ImageButton
             android:id="@+id/return_btn"

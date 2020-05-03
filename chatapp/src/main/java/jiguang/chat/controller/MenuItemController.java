@@ -5,7 +5,6 @@ import android.view.View;
 
 import jiguang.chat.R;
 import jiguang.chat.activity.CommonScanActivity;
-import jiguang.chat.activity.CreateGroupActivity;
 import jiguang.chat.activity.SearchForAddFriendActivity;
 import jiguang.chat.activity.fragment.ConversationListFragment;
 import jiguang.chat.model.Constant;
@@ -22,11 +21,6 @@ public class MenuItemController implements View.OnClickListener {
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
-            case R.id.create_group_ll:
-                mFragment.dismissPopWindow();
-                intent = new Intent(mFragment.getContext(), CreateGroupActivity.class);
-                mFragment.getContext().startActivity(intent);
-                break;
             case R.id.add_friend_with_confirm_ll:
                 mFragment.dismissPopWindow();
                 intent = new Intent(mFragment.getContext(), SearchForAddFriendActivity.class);

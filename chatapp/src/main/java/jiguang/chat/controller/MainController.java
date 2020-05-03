@@ -9,7 +9,6 @@ import java.util.List;
 
 import jiguang.chat.R;
 import jiguang.chat.activity.MainActivity;
-import jiguang.chat.activity.fragment.ChatRoomFragment;
 import jiguang.chat.activity.fragment.ContactsFragment;
 import jiguang.chat.activity.fragment.ConversationListFragment;
 import jiguang.chat.activity.fragment.MeFragment;

@@ -3,7 +3,7 @@
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/title_bar_height"
-                android:background="@color/jmui_jpush_blue">
+                android:background="@color/header_title">
 
     <ImageButton
         android:id="@+id/return_btn"

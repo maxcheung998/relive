@@ -20,7 +20,6 @@ import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 
 public class MeView extends LinearLayout {
     private Context mContext;
-    private TextView mSignatureTv;
     private TextView mNickNameTv;
     private SelectableRoundedImageView mTakePhotoBtn;
     private RelativeLayout mSet_pwd;
@@ -42,7 +41,6 @@ public class MeView extends LinearLayout {
     public void initModule(float density, int width) {
         mTakePhotoBtn = (SelectableRoundedImageView) findViewById(R.id.take_photo_iv);
         mNickNameTv = (TextView) findViewById(R.id.nickName);
-        mSignatureTv = (TextView) findViewById(R.id.signature);
         mSet_pwd = (RelativeLayout) findViewById(R.id.setPassword);
         mQuestions = (RelativeLayout) findViewById(R.id.questions);
         mAbout = (RelativeLayout) findViewById(R.id.about);
@@ -83,7 +81,6 @@ public class MeView extends LinearLayout {
         } else {
             mNickNameTv.setText(myInfo.getUserName());
         }
-        mSignatureTv.setText(myInfo.getSignature());
     }
 
 

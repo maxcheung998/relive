@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48.5dp"
-        android:background="#2DD0CF">
+        android:background="@color/header_title">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,6 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="14dp"/>
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,17 +64,6 @@
                     android:textColor="#FF2C2C2C"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/signature"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="17.33dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="簽名"
-                    android:textColor="#FF999999"
-                    android:textSize="14sp" />
             </LinearLayout>
 
             <ImageView
