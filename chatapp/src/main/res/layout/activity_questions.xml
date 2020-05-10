@@ -1,69 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context="jiguang.chat.activity.SurveyActivity">
     <include layout="@layout/menu_title_bar_with_button"/>
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/answersgrp"
-        android:clickable="true"
-        android:layout_centerVertical="true">
-
-    </RadioGroup>
-
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Next Question"
-        android:id="@+id/qnext"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/answersgrp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="#FF5722"
-        android:textColor="#ffffff"/>
-
-    <Button
-        android:id="@+id/buttonquit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/qnext"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp"
-        android:background="#01579B"
-        android:text="Quit"
-        android:textColor="#ffffff" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Questions"
-        android:id="@+id/q_title"
-        android:layout_marginBottom="52dp"
-        android:layout_above="@+id/answersgrp"
-        android:textColor="@color/chat_text_color"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/q_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:textSize="20dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/menu_title_bar"
-        android:textColor="@color/chat_text_color"
-        android:text="TextView" />
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        >
+
+        <TextView
+            android:id="@+id/q_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/menu_title_bar"
+            android:textColor="@color/chat_text_color"
+            android:text="TextView" />
 
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/survey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Questions"
+            android:id="@+id/q_title"
+            android:layout_below="@+id/imageView1"
+            android:textColor="@color/chat_text_color"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/q_title"
+            android:id="@+id/answersgrp"
+            android:clickable="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next Question"
+            android:id="@+id/qnext"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/answersgrp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="#FF5722"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/buttonquit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qnext"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:background="#01579B"
+            android:text="Quit"
+            android:textColor="#ffffff" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout >
