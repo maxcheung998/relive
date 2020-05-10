@@ -44,10 +44,6 @@ import jiguang.chat.entity.Event;
 import jiguang.chat.view.ConversationListView;
 import jiguang.chat.view.MenuItemView;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
-
 public class ConversationListFragment extends BaseFragment {
 
     private Activity mContext;

@@ -311,7 +311,7 @@
             android:layout_marginRight="13dp"
             android:layout_weight="1"
             android:background="@drawable/blue_btn_selector"
-            android:text="發播消息 "
+            android:text="發送消息 "
             android:textColor="@drawable/blue_text_selector"
             android:textSize="16sp" />
     </LinearLayout>

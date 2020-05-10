@@ -15,10 +15,6 @@ import jiguang.chat.activity.fragment.MeFragment;
 import jiguang.chat.adapter.ViewPagerAdapter;
 import jiguang.chat.view.MainView;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
-
 public class MainController implements View.OnClickListener, ViewPager.OnPageChangeListener {
     private MainView mMainView;
     private MainActivity mContext;
