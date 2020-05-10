@@ -18,10 +18,6 @@ import jiguang.chat.R;
 import jiguang.chat.utils.photochoose.ChoosePhoto;
 import jiguang.chat.utils.photochoose.PhotoUtils;
 
-/**
- * Created by ${chenyn} on 2017/9/18.
- */
-
 public class GroupAvatarActivity extends BaseActivity implements View.OnClickListener {
 
     @Bind(R.id.ll_back)

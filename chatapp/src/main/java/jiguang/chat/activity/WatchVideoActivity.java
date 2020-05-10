@@ -8,9 +8,6 @@ import android.widget.VideoView;
 import jiguang.chat.R;
 
 
-/**
- * 视频播放界面
- */
 public class WatchVideoActivity extends Activity{
 
     private VideoView mVv_video;

@@ -27,9 +27,7 @@ import jiguang.chat.utils.HandleResponseCode;
 import jiguang.chat.utils.NativeImageLoader;
 import jiguang.chat.view.FriendInfoView;
 
-/**
- * Created by ${chenyn} on 2017/3/22.
- */
+
 
 public class FriendInfoActivity extends BaseActivity {
 

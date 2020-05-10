@@ -23,9 +23,6 @@ import jiguang.chat.utils.GroupMemberListComparator;
 import jiguang.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
-/**
- * Created by ${chenyn} on 2017/11/3.
- */
 
 public class GroupMemberListActivity extends BaseActivity {
 

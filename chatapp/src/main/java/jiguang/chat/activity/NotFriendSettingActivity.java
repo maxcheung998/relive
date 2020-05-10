@@ -16,10 +16,6 @@ import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.utils.dialog.LoadDialog;
 import jiguang.chat.view.SlipButton;
 
-/**
- * Created by ${chenyn} on 2017/9/26.
- */
-
 public class NotFriendSettingActivity extends BaseActivity implements SlipButton.OnChangedListener{
     private UserInfo mUserInfo;
     private SlipButton mBtn_addBlackList;

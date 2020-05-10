@@ -30,9 +30,6 @@ import jiguang.chat.controller.ChatDetailController;
 import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.view.ChatDetailView;
 
-/**
- * Created by ${chenyn} on 2017/4/21.
- */
 
 public class ChatDetailActivity extends BaseActivity {
 

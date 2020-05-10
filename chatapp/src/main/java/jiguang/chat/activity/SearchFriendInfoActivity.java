@@ -10,10 +10,6 @@ import android.widget.TextView;
 import jiguang.chat.R;
 import jiguang.chat.model.InfoModel;
 
-/**
- * Created by ${chenyn} on 2017/3/14.
- */
-
 public class SearchFriendInfoActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mIv_photo;

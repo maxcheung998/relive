@@ -5,9 +5,6 @@ import android.widget.TextView;
 
 import jiguang.chat.R;
 
-/**
- * Created by ${chenyn} on 2017/8/16.
- */
 
 public class ScanResultActivity extends BaseActivity {
 

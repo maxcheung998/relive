@@ -34,9 +34,6 @@ import jiguang.chat.utils.pinyin.PinyinComparator;
 import jiguang.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
-/**
- * Created by ${chenyn} on 2017/9/21.
- */
 
 public class FriendListActivity extends BaseActivity {
 

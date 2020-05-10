@@ -29,10 +29,6 @@ import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.NativeImageLoader;
 import jiguang.chat.utils.SharePreferenceManager;
 
-/**
- * Created by ${chenyn} on 2017/3/21.
- */
-
 public class SearchFriendDetailActivity extends BaseActivity {
 
     private ImageView mIv_friendPhoto;

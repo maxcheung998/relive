@@ -23,10 +23,6 @@ import cn.jpush.im.android.api.model.Message;
 import jiguang.chat.R;
 import jiguang.chat.utils.SharePreferenceManager;
 
-/**
- * Created by ${chenyn} on 2017/5/19.
- */
-
 public class DownLoadActivity extends Activity {
 
     private Message mMessage;

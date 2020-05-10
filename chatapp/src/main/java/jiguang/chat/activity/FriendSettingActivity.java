@@ -31,9 +31,6 @@ import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.utils.dialog.LoadDialog;
 import jiguang.chat.view.SlipButton;
 
-/**
- * Created by ${chenyn} on 2017/5/7.
- */
 
 public class FriendSettingActivity extends BaseActivity implements SlipButton.OnChangedListener, View.OnClickListener {
 

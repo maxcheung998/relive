@@ -12,10 +12,6 @@ import jiguang.chat.R;
 import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.ToastUtil;
 
-/**
- * Created by ${chenyn} on 2017/11/27.
- */
-
 public class SetGroupSilenceActivity extends BaseActivity {
     private GroupInfo mGroupInfo;
     private String mUserName;

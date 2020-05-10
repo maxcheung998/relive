@@ -36,10 +36,6 @@ import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.utils.photochoose.ChoosePhoto;
 import jiguang.chat.utils.photochoose.PhotoUtils;
 
-/**
- * Created by ${chenyn} on 2017/11/21.
- */
-
 @SuppressLint("Registered")
 public class SelectCreateGroupTypeActivity extends BaseActivity implements TextWatcher {
 

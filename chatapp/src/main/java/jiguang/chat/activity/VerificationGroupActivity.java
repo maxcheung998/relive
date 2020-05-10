@@ -10,9 +10,7 @@ import cn.jpush.im.api.BasicCallback;
 import jiguang.chat.R;
 import jiguang.chat.utils.HandleResponseCode;
 
-/**
- * Created by ${chenyn} on 2017/11/6.
- */
+
 
 public class VerificationGroupActivity extends BaseActivity {
 

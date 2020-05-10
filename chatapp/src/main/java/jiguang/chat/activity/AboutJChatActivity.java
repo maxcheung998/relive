@@ -12,10 +12,6 @@ import android.widget.TextView;
 import cn.jpush.im.android.api.JMessageClient;
 import jiguang.chat.R;
 
-/**
- * Created by ${chenyn} on 2017/2/22.
- */
-
 public class AboutJChatActivity extends BaseActivity {
 
     private TextView mJChat_version;

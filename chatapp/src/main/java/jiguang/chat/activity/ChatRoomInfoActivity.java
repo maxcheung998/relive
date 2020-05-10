@@ -26,10 +26,6 @@ import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.view.NoScrollGridView;
 
-/**
- * Created by ${chenyn} on 2017/11/8.
- */
-
 public class ChatRoomInfoActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView mTvChatRoomName, mTvChatRoomDesc, mTvChatRoomOwner;

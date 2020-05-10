@@ -26,9 +26,7 @@ import jiguang.chat.adapter.GroupGridViewAdapter;
 import jiguang.chat.application.JGApplication;
 import jiguang.chat.utils.DialogCreator;
 
-/**
- * Created by ${chenyn} on 2017/5/8.
- */
+
 
 public class GroupGridViewActivity extends BaseActivity {
     private static final String TAG = "ChatDetailActivity";

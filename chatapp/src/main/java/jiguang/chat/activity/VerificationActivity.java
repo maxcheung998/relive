@@ -18,10 +18,6 @@ import jiguang.chat.model.InfoModel;
 import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.ToastUtil;
 
-/**
- * Created by ${chenyn} on 2017/3/14.
- */
-
 public class VerificationActivity extends BaseActivity {
 
     private EditText mEt_reason;

@@ -46,8 +46,8 @@
             android:value="jiguang.chat.database.UserEntry, jiguang.chat.database.FriendEntry,              jiguang.chat.database.FriendRecommendEntry, jiguang.chat.database.GroupApplyEntry             , jiguang.chat.database.RefuseGroupEntry" />
         <meta-data
             android:name="AA_DB_VERSION"
-            android:value="4" /> <!-- Since JCore2.0.0 Required SDK核心功能 -->
-        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+            android:value="4" />
+
         <service
             android:name=".MyService"
             android:enabled="true"
@@ -60,7 +60,7 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" /> <!-- 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey -->
+            android:process=":remote" />
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="UAkQeBK84ioVGzYgA1rSWYfuD4xYtpmV" />
@@ -96,7 +96,7 @@
         <activity
             android:name=".activity.AboutJChatActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseThemes" /> <!-- 这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效 -->
+            android:theme="@style/BaseThemes" />
         <activity
             android:name=".activity.PersonalActivity"
             android:screenOrientation="portrait"

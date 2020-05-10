@@ -17,9 +17,6 @@ import jiguang.chat.database.FriendEntry;
 import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.utils.pinyin.HanyuPinyin;
 
-/**
- * Created by ${chenyn} on 2017/5/7.
- */
 
 public class SetNoteNameActivity extends BaseActivity {
 

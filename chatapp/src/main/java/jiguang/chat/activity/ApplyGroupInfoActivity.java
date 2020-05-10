@@ -21,10 +21,6 @@ import jiguang.chat.database.GroupApplyEntry;
 import jiguang.chat.database.UserEntry;
 import jiguang.chat.utils.DialogCreator;
 
-/**
- * Created by ${chenyn} on 2017/11/22.
- */
-
 public class ApplyGroupInfoActivity extends BaseActivity {
 
     private ImageView mIv_avatar;

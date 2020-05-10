@@ -26,9 +26,6 @@ import cn.jpush.im.api.BasicCallback;
 import jiguang.chat.R;
 import jiguang.chat.utils.DialogCreator;
 
-/**
- * Created by ${chenyn} on 2017/11/28.
- */
 
 public class SilenceUsersActivity extends BaseActivity {
 

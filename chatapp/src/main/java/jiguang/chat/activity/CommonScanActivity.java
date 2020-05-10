@@ -54,9 +54,6 @@ import jiguang.chat.utils.zxing.decode.DecodeThread;
 import jiguang.chat.utils.zxing.decode.Utils;
 
 
-/**
- * 二维码扫描使用
- */
 public final class CommonScanActivity extends Activity implements ScanListener, View.OnClickListener {
     SurfaceView scanPreview = null;
     View scanContainer;

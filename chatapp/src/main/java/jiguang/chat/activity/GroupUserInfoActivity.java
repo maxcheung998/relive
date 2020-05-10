@@ -26,9 +26,7 @@ import jiguang.chat.entity.Event;
 import jiguang.chat.entity.EventType;
 import jiguang.chat.utils.DialogCreator;
 
-/**
- * Created by ${chenyn} on 2017/11/27.
- */
+
 
 public class GroupUserInfoActivity extends BaseActivity {
 

@@ -66,9 +66,6 @@ import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 import jiguang.chat.utils.pinyin.CharacterParser;
 import jiguang.chat.utils.query.TextSearcher;
 
-/**
- * Created by ${chenyn} on 2017/4/1.
- */
 
 public class SearchContactsActivity extends BaseActivity {
 

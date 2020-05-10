@@ -48,9 +48,6 @@ import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.HandleResponseCode;
 import jiguang.chat.utils.query.TextSearcher;
 
-/**
- * Created by ${chenyn} on 2017/5/2.
- */
 
 public class SearchMoreGroupActivity extends BaseActivity {
 

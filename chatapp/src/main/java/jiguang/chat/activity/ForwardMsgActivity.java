@@ -27,10 +27,6 @@ import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.HandleResponseCode;
 
 
-/**
- * Created by ${chenyn} on 2017/7/16.
- */
-
 public class ForwardMsgActivity extends BaseActivity {
 
     private LinearLayout mLl_groupAll;

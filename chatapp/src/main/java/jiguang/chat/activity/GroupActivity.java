@@ -19,9 +19,6 @@ import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.HandleResponseCode;
 import jiguang.chat.utils.ToastUtil;
 
-/**
- * Created by ${chenyn} on 2017/4/26.
- */
 
 public class GroupActivity extends BaseActivity {
 

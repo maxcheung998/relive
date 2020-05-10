@@ -27,9 +27,6 @@ import jiguang.chat.utils.ToastUtil;
 import jiguang.chat.utils.dialog.LoadDialog;
 import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 
-/**
- * Created by ${chenyn} on 2017/3/13.
- */
 
 public class SearchForAddFriendActivity extends BaseActivity implements View.OnClickListener {
 

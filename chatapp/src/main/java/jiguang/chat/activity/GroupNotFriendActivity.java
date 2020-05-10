@@ -30,9 +30,6 @@ import jiguang.chat.entity.EventType;
 import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.ToastUtil;
 
-/**
- * Created by ${chenyn} on 2017/5/10.
- */
 
 public class GroupNotFriendActivity extends BaseActivity implements View.OnClickListener {
 

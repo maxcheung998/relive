@@ -26,10 +26,6 @@ import jiguang.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 
-/**
- * @ 功能, 选择群组中成员
- */
-
 public class ChooseAtMemberActivity extends BaseActivity {
 
     private List<UserInfo> mList;

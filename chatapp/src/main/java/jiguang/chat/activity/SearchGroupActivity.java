@@ -40,9 +40,6 @@ import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 import jiguang.chat.utils.pinyin.CharacterParser;
 import jiguang.chat.utils.query.TextSearcher;
 
-/**
- * Created by ${chenyn} on 2017/6/22.
- */
 
 public class SearchGroupActivity extends BaseActivity implements View.OnClickListener {
 

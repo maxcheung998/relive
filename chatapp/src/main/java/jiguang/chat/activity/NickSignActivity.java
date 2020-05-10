@@ -15,9 +15,6 @@ import android.widget.TextView;
 
 import jiguang.chat.R;
 
-/**
- * Created by ${chenyn} on 2017/2/27.
- */
 
 public class NickSignActivity extends BaseActivity {
     public static final String TYPE = "type";

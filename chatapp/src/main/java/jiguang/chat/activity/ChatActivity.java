@@ -103,10 +103,6 @@ import jiguang.chat.view.TipView;
 import jiguang.chat.view.listview.DropDownListView;
 
 
-/**
- * Created by ${chenyn} on 2017/3/26.
- */
-
 public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBoardListener, View.OnClickListener {
     @Bind(R.id.lv_chat)
     DropDownListView lvChat;

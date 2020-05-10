@@ -15,9 +15,7 @@ import jiguang.chat.activity.fragment.GroupFragment;
 import jiguang.chat.adapter.ViewPagerAdapter;
 import jiguang.chat.view.NoScrollViewPager;
 
-/**
- * Created by ${chenyn} on 2017/11/7.
- */
+
 
 public class VerificationMessageActivity extends FragmentActivity {
 
