@@ -32,7 +32,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".activity.QuestionsActivity"></activity>
+        <activity android:name=".activity.QuestionsActivity"/>
+        <activity android:name=".activity.IntroDepressionActivity"/>
+        <activity android:name=".activity.IntroAnxietyActivity"/>
         <activity android:name=".activity.SurveyActivity" />
         <activity android:name=".activity.ChatbotActivity" />
         <activity android:name=".activity.SearchForChatRoomActivity" />

@@ -24,6 +24,8 @@ public class MeView extends LinearLayout {
     private SelectableRoundedImageView mTakePhotoBtn;
     private RelativeLayout mSet_pwd;
     private RelativeLayout mQuestions;
+    private RelativeLayout mIntroDepression;
+    private RelativeLayout mIntroAnxiety;
     private RelativeLayout mChatbot;
     private RelativeLayout mAbout;
     private RelativeLayout mExit;
@@ -43,6 +45,8 @@ public class MeView extends LinearLayout {
         mNickNameTv = (TextView) findViewById(R.id.nickName);
         mSet_pwd = (RelativeLayout) findViewById(R.id.setPassword);
         mQuestions = (RelativeLayout) findViewById(R.id.questions);
+        mIntroDepression = (RelativeLayout) findViewById(R.id.intro_layout1);
+        mIntroAnxiety = (RelativeLayout) findViewById(R.id.intro_layout2);
         mAbout = (RelativeLayout) findViewById(R.id.about);
         mExit = (RelativeLayout) findViewById(R.id.exit);
         mRl_personal = (RelativeLayout) findViewById(R.id.rl_personal);
@@ -59,6 +63,8 @@ public class MeView extends LinearLayout {
     public void setListener(OnClickListener onClickListener) {
         mSet_pwd.setOnClickListener(onClickListener);
         mQuestions.setOnClickListener(onClickListener);
+        mIntroDepression.setOnClickListener(onClickListener);
+        mIntroAnxiety.setOnClickListener(onClickListener);
         mChatbot.setOnClickListener(onClickListener);
         mAbout.setOnClickListener(onClickListener);
         mExit.setOnClickListener(onClickListener);

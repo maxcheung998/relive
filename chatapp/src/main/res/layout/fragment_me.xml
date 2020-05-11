@@ -143,6 +143,44 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/intro_layout1"
+                style="@style/SettingItemStyle">
+
+                <TextView
+                    android:id="@+id/intro_depression"
+                    style="@style/info_left_style"
+                    android:text="認識抑鬱症" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13.93dp"
+                    android:background="@drawable/arrow"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/intro_layout2"
+                style="@style/SettingItemStyle">
+
+                <TextView
+                    android:id="@+id/intro_anxiety"
+                    style="@style/info_left_style"
+                    android:text="認識焦慮症" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13.93dp"
+                    android:background="@drawable/arrow"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/questions"
                 style="@style/SettingItemStyle">
 

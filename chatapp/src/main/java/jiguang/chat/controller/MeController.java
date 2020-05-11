@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import jiguang.chat.R;
 import jiguang.chat.activity.AboutJChatActivity;
 import jiguang.chat.activity.ChatbotActivity;
+import jiguang.chat.activity.IntroAnxietyActivity;
+import jiguang.chat.activity.IntroDepressionActivity;
 import jiguang.chat.activity.PersonalActivity;
 import jiguang.chat.activity.ResetPasswordActivity;
 import jiguang.chat.activity.SurveyActivity;
@@ -49,6 +51,12 @@ public class MeController implements View.OnClickListener {
                 break;
             case R.id.chatbot:
                 mContext.startActivity(new Intent(mContext.getContext(), ChatbotActivity.class));
+                break;
+            case R.id.intro_layout1:
+                mContext.startActivity(new Intent(mContext.getContext(), IntroDepressionActivity.class));
+                break;
+            case R.id.intro_layout2:
+                mContext.startActivity(new Intent(mContext.getContext(), IntroAnxietyActivity.class));
                 break;
             case R.id.exit:
                 View.OnClickListener listener = new View.OnClickListener() {
