@@ -39,7 +39,7 @@ public class ChatbotActivity extends BaseActivity implements View.OnClickListene
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("file:///android_asset/chatbot.html");
+        webView.loadUrl("https://weariest-neutrons.000webhostapp.com");
 
     }
 
