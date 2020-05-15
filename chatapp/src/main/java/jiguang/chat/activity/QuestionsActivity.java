@@ -156,12 +156,12 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
                         Log.d("11", String.valueOf(count));
                         String msg;
                         if (count < 8){
-                            Toast.makeText(QuestionsActivity.this, "你有個正面人生，加油繼續保持下去！ ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(QuestionsActivity.this, "你有個正面態度，加油繼續保持下去！ ", Toast.LENGTH_LONG).show();
                             finish();
                         } else if (count <= 20){
                             //Toast.makeText(QuestionsActivity.this, "你有什麽對我說嗎？來和我一起聊天吧！", Toast.LENGTH_LONG).show();
                             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-                            builder1.setMessage("你有什麽對我說嗎？不如同Relive的小明傾傾？");
+                            builder1.setMessage("你有什麽心事對我說嗎？不如同Relive Bot傾傾？");
                             builder1.setCancelable(true);
                             builder1.setPositiveButton(
                                     "好",
@@ -189,7 +189,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
                         } else if (count > 20) {
                             //Toast.makeText(QuestionsActivity.this, "別讓抑鬱打敗你，不如同佢傾傾？", Toast.LENGTH_LONG).show();
                             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-                            builder1.setMessage("別讓抑鬱打敗你，不如同佢傾傾？");
+                            builder1.setMessage("別讓抑鬱打敗你，不如打個電話同 OUHK SAO 社工傾一傾？");
                             builder1.setCancelable(true);
                             builder1.setPositiveButton(
                                     "好",
@@ -198,7 +198,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
                                             dialog.cancel();
                                             //String phone = "+85224667350";
                                             Intent intent = new Intent(Intent.ACTION_DIAL);
-                                            intent.setData(Uri.parse("tel:85224667350"));
+                                            intent.setData(Uri.parse("tel:85227686856"));
                                             startActivity(intent);
                                             finish();
                                         }
