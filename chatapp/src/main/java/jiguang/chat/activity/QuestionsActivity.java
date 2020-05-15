@@ -1,8 +1,12 @@
 package jiguang.chat.activity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -38,6 +42,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
     private RadioGroup mRadioGP;
     private int mStart_count  = 0;
     private TextView mCounter;
+    private int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
         initView();
         initListener();
         StartSurvery();
+        count = 0;
     }
 
     private void initView() {
@@ -123,6 +129,7 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.buttonquit:
                 finish();
@@ -131,6 +138,8 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
                 Log.d("d8", "hi");
                 int checkedRadioButtonId = mRadioGP.getCheckedRadioButtonId();
                 if (checkedRadioButtonId != -1){
+                    count = count + (checkedRadioButtonId);
+
                     RadioButton radioBtn = (RadioButton) findViewById(checkedRadioButtonId);
                     //Toast.makeText(QuestionsActivity.this, radioBtn.getText(), Toast.LENGTH_SHORT).show();
                     mStart_count++;
@@ -144,8 +153,71 @@ public class QuestionsActivity extends BaseActivity implements View.OnClickListe
                             e.printStackTrace();
                         }
                     }else{
-                        Toast.makeText(QuestionsActivity.this, "The questionnaire is finished ", Toast.LENGTH_SHORT).show();
-                        finish();
+                        Log.d("11", String.valueOf(count));
+                        String msg;
+                        if (count < 8){
+                            Toast.makeText(QuestionsActivity.this, "你有個正面人生，加油繼續保持下去！ ", Toast.LENGTH_LONG).show();
+                            finish();
+                        } else if (count <= 20){
+                            //Toast.makeText(QuestionsActivity.this, "你有什麽對我說嗎？來和我一起聊天吧！", Toast.LENGTH_LONG).show();
+                            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+                            builder1.setMessage("你有什麽對我說嗎？不如同Relive的小明傾傾？");
+                            builder1.setCancelable(true);
+                            builder1.setPositiveButton(
+                                    "好",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                            intent.setClass(QuestionsActivity.this, ChatbotActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    });
+
+                            builder1.setNegativeButton(
+                                    "不好",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                            finish();
+                                        }
+                                    });
+
+                            AlertDialog alert11 = builder1.create();
+                            alert11.show();
+
+                        } else if (count > 20) {
+                            //Toast.makeText(QuestionsActivity.this, "別讓抑鬱打敗你，不如同佢傾傾？", Toast.LENGTH_LONG).show();
+                            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+                            builder1.setMessage("別讓抑鬱打敗你，不如同佢傾傾？");
+                            builder1.setCancelable(true);
+                            builder1.setPositiveButton(
+                                    "好",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                            //String phone = "+85224667350";
+                                            Intent intent = new Intent(Intent.ACTION_DIAL);
+                                            intent.setData(Uri.parse("tel:85224667350"));
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    });
+
+                            builder1.setNegativeButton(
+                                    "不好",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                            finish();
+                                        }
+                                    });
+
+                            AlertDialog alert11 = builder1.create();
+                            alert11.show();
+                        }
+
+
                     }
                 }else{
                     Toast.makeText(QuestionsActivity.this, "Select your answer.", Toast.LENGTH_SHORT).show();
