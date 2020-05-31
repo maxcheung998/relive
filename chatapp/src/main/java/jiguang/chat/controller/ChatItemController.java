@@ -72,7 +72,6 @@ import jiguang.chat.activity.GroupNotFriendActivity;
 import jiguang.chat.adapter.ChattingListAdapter;
 import jiguang.chat.adapter.ChattingListAdapter.ViewHolder;
 import jiguang.chat.application.JGApplication;
-import jiguang.chat.location.activity.MapPickerActivity;
 import jiguang.chat.pickerimage.utils.BitmapDecoder;
 import jiguang.chat.utils.FileHelper;
 import jiguang.chat.utils.FileUtils;
@@ -1252,17 +1251,6 @@ public class ChatItemController {
                         intent.putIntegerArrayListExtra(JGApplication.MsgIDs, getImgMsgIDList());
                         intent.putExtra("fromChatActivity", true);
                         intent.setClass(mContext, BrowserViewPagerActivity.class);
-                        mContext.startActivity(intent);
-                    }
-                    break;
-                case location:
-                    if (holder.picture != null && v.getId() == holder.picture.getId()) {
-                        Intent intent = new Intent(mContext, MapPickerActivity.class);
-                        LocationContent locationContent = (LocationContent) msg.getContent();
-                        intent.putExtra("latitude", locationContent.getLatitude().doubleValue());
-                        intent.putExtra("longitude", locationContent.getLongitude().doubleValue());
-                        intent.putExtra("locDesc", locationContent.getAddress());
-                        intent.putExtra("sendLocation", false);
                         mContext.startActivity(intent);
                     }
                     break;

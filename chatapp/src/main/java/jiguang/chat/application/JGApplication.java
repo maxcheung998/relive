@@ -19,7 +19,6 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import jiguang.chat.database.UserEntry;
 import jiguang.chat.entity.NotificationClickEventReceiver;
-import jiguang.chat.location.service.LocationService;
 import jiguang.chat.pickerimage.utils.StorageUtil;
 import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.utils.imagepicker.GlideImageLoader;
@@ -111,7 +110,6 @@ public class JGApplication extends com.activeandroid.app.Application {
     public static String groupAvatarPath;
 
     public static Context context;
-    public static LocationService locationService;
 
     public static List<GroupInfo> mGroupInfoList = new ArrayList<>();
     public static List<UserInfo> mFriendInfoList = new ArrayList<>();
@@ -133,7 +131,6 @@ public class JGApplication extends com.activeandroid.app.Application {
         StorageUtil.init(context, null);
         Fresco.initialize(getApplicationContext());
         SDKInitializer.initialize(getApplicationContext());
-        locationService = new LocationService(getApplicationContext());
 
         JMessageClient.init(getApplicationContext(), true);
         JMessageClient.setDebugMode(true);

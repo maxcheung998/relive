@@ -73,7 +73,6 @@ import jiguang.chat.adapter.ChattingListAdapter;
 import jiguang.chat.application.JGApplication;
 import jiguang.chat.entity.Event;
 import jiguang.chat.entity.EventType;
-import jiguang.chat.location.activity.MapPickerActivity;
 import jiguang.chat.model.Constants;
 import jiguang.chat.pickerimage.PickImageActivity;
 import jiguang.chat.pickerimage.utils.Extras;
@@ -1173,19 +1172,6 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
                     startActivityForResult(intent, RequestCode.TAKE_PHOTO);
                 }
                 break;
-            case JGApplication.TAKE_LOCATION:
-                if (ContextCompat.checkSelfPermission(ChatActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
-                        != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "請在應用管理中打開“位置”權限！", Toast.LENGTH_LONG).show();
-                } else {
-                    intent = new Intent(mContext, MapPickerActivity.class);
-                    intent.putExtra(JGApplication.CONV_TYPE, mConv.getType());
-                    intent.putExtra(JGApplication.TARGET_ID, mTargetId);
-                    intent.putExtra(JGApplication.TARGET_APP_KEY, mTargetAppKey);
-                    intent.putExtra("sendLocation", true);
-                    startActivityForResult(intent, JGApplication.REQUEST_CODE_SEND_LOCATION);
-                }
-                break;
             case JGApplication.FILE_MESSAGE:
                 if (ContextCompat.checkSelfPermission(this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -1295,31 +1281,6 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
                         e.printStackTrace();
                     }
                 }
-                break;
-            case JGApplication.RESULT_CODE_SEND_LOCATION:
-                //之前是在地图选择那边做的发送逻辑,这里是通过msgID拿到的message放到ui上.但是发现问题,message的status始终是send_going状态
-                //因为那边发送的是自己创建的对象,这里通过id取出来的不是同一个对象.尽管内容都是一样的.所以为了保证发送的对象个ui上拿出来的
-                //对象是同一个,就地图那边传过来数据,在这边进行创建message
-                double latitude = data.getDoubleExtra("latitude", 0);
-                double longitude = data.getDoubleExtra("longitude", 0);
-                int mapview = data.getIntExtra("mapview", 0);
-                String street = data.getStringExtra("street");
-                String path = data.getStringExtra("path");
-                LocationContent locationContent = new LocationContent(latitude,
-                        longitude, mapview, street);
-                locationContent.setStringExtra("path", path);
-                Message message = mConv.createSendMessage(locationContent);
-                MessageSendingOptions options = new MessageSendingOptions();
-                options.setNeedReadReceipt(true);
-                JMessageClient.sendMessage(message, options);
-                mChatAdapter.addMsgFromReceiptToList(message);
-
-                int customMsgId = data.getIntExtra("customMsg", -1);
-                if (-1 != customMsgId) {
-                    Message customMsg = mConv.getMessage(customMsgId);
-                    mChatAdapter.addMsgToList(customMsg);
-                }
-                mChatView.setToBottom();
                 break;
             case JGApplication.RESULT_CODE_SEND_FILE:
                 String msgListJson = data.getStringExtra(JGApplication.MSG_LIST_JSON);
