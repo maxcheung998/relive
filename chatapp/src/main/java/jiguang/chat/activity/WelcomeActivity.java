@@ -21,7 +21,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        //检测账号是否登陆
+
         UserInfo myInfo = JMessageClient.getMyInfo();
         if (myInfo == null) {
             goToRegisterAndLoginActivity();

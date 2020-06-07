@@ -113,7 +113,7 @@
                 android:layout_marginBottom="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="3dp"
-                android:text="个人名片"
+                android:text="個人名片"
                 android:textColor="#989898"
                 android:textSize="10sp"/>
 
