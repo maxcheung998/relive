@@ -16,7 +16,7 @@ public class IntroAnxietyActivity extends BaseActivity{
     }
 
     private void initView() {
-        initTitle(true, true, "認識抑鬱症", "", false, "");
+        initTitle(true, true, "認識焦慮症", "", false, "");
         TextView textTitle = (TextView) findViewById(R.id.title);
         TextView textIntro = (TextView) findViewById(R.id.intro);
         ImageView heropic = (ImageView) findViewById(R.id.heropic);

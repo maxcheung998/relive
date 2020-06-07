@@ -50,7 +50,6 @@
             android:paddingBottom="5dp"
             android:paddingTop="5dp">
 
-            <!--输入框-->
             <jiguang.chat.utils.keyboard.widget.EmoticonsEditText
                 android:id="@+id/et_chat"
                 android:layout_width="match_parent"
@@ -76,7 +75,6 @@
             android:focusableInTouchMode="true"
             android:orientation="horizontal">
 
-            <!--表情-->
             <ImageView
                 android:id="@+id/btn_face"
                 android:layout_width="wrap_content"
@@ -85,7 +83,7 @@
                 android:layout_marginLeft="7dp"
                 android:src="@drawable/icon_face_nomal"/>
 
-            <!--apps 功能-->
+
             <ImageView
                 android:id="@+id/btn_multimedia"
                 android:layout_width="wrap_content"
@@ -94,7 +92,7 @@
                 android:layout_marginRight="14dp"
                 android:src="@drawable/btn_multi_bg"/>
 
-            <!--发送-->
+
             <Button
                 android:id="@+id/btn_send"
                 android:layout_width="50dp"

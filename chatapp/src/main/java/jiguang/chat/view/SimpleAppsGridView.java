@@ -32,7 +32,6 @@ public class SimpleAppsGridView extends RelativeLayout {
         GridView gv_apps = (GridView) view.findViewById(R.id.gv_apps);
         ArrayList<AppBean> mAppBeanList = new ArrayList<>();
         mAppBeanList.add(new AppBean(R.mipmap.businesscard, "名片"));
-
         AppsAdapter adapter = new AppsAdapter(getContext(), mAppBeanList);
         gv_apps.setAdapter(adapter);
     }
