@@ -25,9 +25,6 @@ import jiguang.chat.utils.imagepicker.GlideImageLoader;
 import jiguang.chat.utils.imagepicker.ImagePicker;
 import jiguang.chat.utils.imagepicker.view.CropImageView;
 
-/**
- * Created by ${chenyn} on 2017/2/16.
- */
 
 //使用的数据库需要继承这个application
 public class JGApplication extends com.activeandroid.app.Application {

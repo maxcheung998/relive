@@ -23,9 +23,6 @@ import jiguang.chat.utils.HandleResponseCode;
 import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.utils.ToastUtil;
 
-/**
- * Created by ${chenyn} on 2017/2/16.
- */
 
 public class LoginController implements View.OnClickListener {
 

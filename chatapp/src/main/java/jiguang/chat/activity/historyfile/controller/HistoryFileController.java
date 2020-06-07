@@ -22,9 +22,6 @@ import jiguang.chat.adapter.ViewPagerAdapter;
 import jiguang.chat.application.JGApplication;
 import jiguang.chat.entity.SelectedHistoryFileListener;
 
-/**
- * Created by ${chenyn} on 2017/8/24.
- */
 
 public class HistoryFileController implements View.OnClickListener, ViewPager.OnPageChangeListener,
         SelectedHistoryFileListener {

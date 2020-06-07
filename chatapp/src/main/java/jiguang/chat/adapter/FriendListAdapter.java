@@ -22,9 +22,6 @@ import jiguang.chat.R;
 import jiguang.chat.database.FriendEntry;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-/**
- * Created by ${chenyn} on 2017/9/21.
- */
 
 public class FriendListAdapter extends BaseAdapter implements StickyListHeadersAdapter, SectionIndexer {
     private List<FriendEntry> mData;

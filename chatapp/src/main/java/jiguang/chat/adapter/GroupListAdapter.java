@@ -38,9 +38,6 @@ import jiguang.chat.entity.EventType;
 import jiguang.chat.utils.DialogCreator;
 import jiguang.chat.utils.HandleResponseCode;
 
-/**
- * Created by ${chenyn} on 2017/4/26.
- */
 
 public class GroupListAdapter extends BaseAdapter {
     private Context mContext;

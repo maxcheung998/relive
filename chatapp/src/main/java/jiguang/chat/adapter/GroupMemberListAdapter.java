@@ -24,9 +24,7 @@ import jiguang.chat.activity.GroupMemberListActivity;
 import jiguang.chat.utils.pinyin.HanziToPinyin;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-/**
- * Created by ${chenyn} on 2017/11/3.
- */
+
 
 public class GroupMemberListAdapter extends BaseAdapter implements StickyListHeadersAdapter, SectionIndexer {
 

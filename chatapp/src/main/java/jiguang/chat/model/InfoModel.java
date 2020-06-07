@@ -8,9 +8,6 @@ import java.util.Date;
 
 import cn.jpush.im.android.api.model.UserInfo;
 
-/**
- * Created by ${chenyn} on 2017/3/14.
- */
 
 public class InfoModel {
     public  UserInfo friendInfo;

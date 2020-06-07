@@ -37,10 +37,6 @@ import jiguang.chat.utils.FileUtils;
 import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.view.SendImageView;
 
-/**
- * Created by ${chenyn} on 2017/8/23.
- */
-
 public class ImageFileFragment extends BaseFragment {
 
     private HistoryFileController mController;

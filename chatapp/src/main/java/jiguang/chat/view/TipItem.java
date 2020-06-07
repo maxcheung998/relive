@@ -2,9 +2,6 @@ package jiguang.chat.view;
 
 import android.graphics.Color;
 
-/**
- * Created by ${chenyn} on 2017/7/13.
- */
 
 public class TipItem {
     private String title;

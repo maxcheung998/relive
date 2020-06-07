@@ -48,19 +48,6 @@
             android:textColor="@drawable/text_selector"
             android:textSize="16sp" />
 
-        <RadioButton
-            android:id="@+id/rb_group"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@null"
-            android:button="@null"
-            android:drawableBottom="@drawable/selector_home_title_line"
-            android:gravity="center"
-            android:text="群組驗證"
-            android:textColor="@drawable/text_selector"
-            android:textSize="16sp" />
-
     </RadioGroup>
 
     <View

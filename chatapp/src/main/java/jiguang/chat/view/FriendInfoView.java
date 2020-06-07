@@ -22,9 +22,6 @@ import jiguang.chat.R;
 import jiguang.chat.activity.FriendInfoActivity;
 import jiguang.chat.controller.FriendInfoController;
 
-/**
- * Created by ${chenyn} on 2017/3/24.
- */
 
 public class FriendInfoView extends LinearLayout {
 

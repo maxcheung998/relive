@@ -28,10 +28,6 @@ import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.utils.ViewHolder;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-/**
- * Created by ${chenyn} on 2017/8/29.
- */
-
 public class DocumentFileAdapter extends BaseAdapter implements StickyListHeadersAdapter {
 
     private List<FileItem> mList;

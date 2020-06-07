@@ -18,10 +18,6 @@ import cn.jpush.im.android.api.model.UserInfo;
 import jiguang.chat.R;
 import jiguang.chat.application.JGApplication;
 
-/**
- * Created by ${chenyn} on 2017/9/6.
- */
-
 public class AlreadyReadAdapter extends BaseAdapter {
     List<UserInfo> alreadyRead = JGApplication.alreadyRead;
     private Context mContext;

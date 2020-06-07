@@ -18,9 +18,6 @@ import cn.jpush.im.android.api.model.UserInfo;
 import jiguang.chat.R;
 import jiguang.chat.application.JGApplication;
 
-/**
- * Created by ${chenyn} on 2017/9/5.
- */
 
 public class NotReadAdapter extends BaseAdapter {
 

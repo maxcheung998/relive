@@ -28,10 +28,6 @@ import jiguang.chat.entity.FileItem;
 import jiguang.chat.entity.SelectedHistoryFileListener;
 import jiguang.chat.utils.SharePreferenceManager;
 
-/**
- * Created by ${chenyn} on 2017/8/24.
- */
-
 public class ImageFileAdapter extends BaseAdapter implements StickyGridHeadersSimpleAdapter {
     private List<FileItem> mItemList;
     private ArrayList<String> mPath;

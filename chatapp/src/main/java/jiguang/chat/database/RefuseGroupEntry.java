@@ -5,9 +5,6 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
-/**
- * Created by ${chenyn} on 2017/11/24.
- */
 
 @Table(name = "refuse_group", id = "_id")
 public class RefuseGroupEntry extends Model {

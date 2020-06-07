@@ -8,9 +8,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-/**
- * 类说明：画出扫描框的四个脚的脚边框，也可以直接用一张图片代替
- */
 public class ZiXingView extends ImageView {
     private Context context;
     public ZiXingView(Context context, AttributeSet attrs) {

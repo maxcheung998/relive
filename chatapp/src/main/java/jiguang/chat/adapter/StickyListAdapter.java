@@ -45,9 +45,7 @@ import jiguang.chat.database.FriendEntry;
 import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-/**
- * Created by ${chenyn} on 2017/3/16.
- */
+
 
 public class StickyListAdapter extends BaseAdapter implements StickyListHeadersAdapter, SectionIndexer {
     private Context mContext;

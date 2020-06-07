@@ -15,9 +15,7 @@ import jiguang.chat.R;
 import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 import jiguang.chat.utils.pinyin.CharacterParser;
 
-/**
- * Created by ${chenyn} on 2017/5/2.
- */
+
 
 public class SearchGroupListAdapter extends BaseAdapter {
     private List<GroupInfo> filterGroupId;

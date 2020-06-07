@@ -5,9 +5,6 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ${chenyn} on 2017/7/17.
- */
 
 public class ActivityController {
     public static List<Activity> activities = new ArrayList<>();

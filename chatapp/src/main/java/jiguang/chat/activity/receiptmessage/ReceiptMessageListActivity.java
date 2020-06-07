@@ -14,10 +14,6 @@ import java.util.List;
 import jiguang.chat.R;
 import jiguang.chat.adapter.ViewPagerAdapter;
 
-/**
- * Created by ${chenyn} on 2017/9/5.
- */
-
 public class ReceiptMessageListActivity extends FragmentActivity implements ViewPager.OnPageChangeListener,
         View.OnClickListener{
 

@@ -31,9 +31,6 @@ import jiguang.chat.utils.pinyin.PinyinComparator;
 import jiguang.chat.utils.sidebar.SideBar;
 import jiguang.chat.view.ContactsView;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
 
 public class ContactsController implements View.OnClickListener, SideBar.OnTouchingLetterChangedListener {
     private ContactsView mContactsView;

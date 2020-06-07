@@ -44,10 +44,6 @@ import jiguang.chat.utils.ThreadUtil;
 import jiguang.chat.utils.pinyin.HanziToPinyin;
 import jiguang.chat.view.ContactsView;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
-
 public class ContactsFragment extends BaseFragment {
     private View mRootView;
     private ContactsView mContactsView;

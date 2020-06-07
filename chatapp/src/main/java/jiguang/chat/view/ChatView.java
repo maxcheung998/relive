@@ -14,10 +14,6 @@ import jiguang.chat.activity.ChatActivity;
 import jiguang.chat.adapter.ChattingListAdapter;
 import jiguang.chat.view.listview.DropDownListView;
 
-/**
- * Created by ${chenyn} on 2017/3/28.
- */
-
 public class ChatView extends RelativeLayout {
     Context mContext;
     private ImageButton mReturnButton;
@@ -123,8 +119,6 @@ public class ChatView extends RelativeLayout {
         mAtMeBtn.setVisibility(VISIBLE);
     }
 
-
-    //设置群聊名字
     public void setChatTitle(String name, int count) {
         mChatTitle.setText(name);
         mGroupNumTv.setText("(" + count + ")");

@@ -27,9 +27,6 @@ import jiguang.chat.utils.SortConvList;
 import jiguang.chat.utils.SortTopConvList;
 import jiguang.chat.view.ConversationListView;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
 
 public class ConversationListController implements View.OnClickListener,
         AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {

@@ -28,9 +28,6 @@ import cn.jpush.im.api.BasicCallback;
 import jiguang.chat.R;
 import jiguang.chat.database.GroupApplyEntry;
 
-/**
- * Created by ${chenyn} on 2017/11/7.
- */
 
 public class GroupVerificationAdapter extends BaseAdapter {
     private Activity mContext;

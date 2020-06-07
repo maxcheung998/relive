@@ -17,9 +17,6 @@ import jiguang.chat.R;
 import jiguang.chat.activity.fragment.ConversationListFragment;
 import jiguang.chat.utils.ThreadUtil;
 
-/**
- * Created by ${chenyn} on 2017/3/13.
- */
 
 public class ConversationListView {
     private View mConvListFragment;

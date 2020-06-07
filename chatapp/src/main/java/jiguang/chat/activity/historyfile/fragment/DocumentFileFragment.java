@@ -28,9 +28,6 @@ import jiguang.chat.activity.historyfile.controller.HistoryFileController;
 import jiguang.chat.entity.FileItem;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
-/**
- * Created by ${chenyn} on 2017/8/23.
- */
 
 public class DocumentFileFragment extends BaseFragment {
     private HistoryFileController mController;

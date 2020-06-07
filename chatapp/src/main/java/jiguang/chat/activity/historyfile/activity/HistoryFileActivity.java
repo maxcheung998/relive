@@ -11,9 +11,6 @@ import jiguang.chat.activity.historyfile.controller.HistoryFileController;
 import jiguang.chat.activity.historyfile.view.HistoryFileView;
 import jiguang.chat.utils.SharePreferenceManager;
 
-/**
- * Created by ${chenyn} on 2017/8/23.
- */
 
 public class HistoryFileActivity extends FragmentActivity {
     private HistoryFileView mView;

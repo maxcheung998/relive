@@ -17,10 +17,6 @@ import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.UserInfo;
 import jiguang.chat.R;
 
-/**
- * Created by ${chenyn} on 2017/5/3.
- */
-
 
 public class CreateGroupAdapter extends BaseAdapter {
 

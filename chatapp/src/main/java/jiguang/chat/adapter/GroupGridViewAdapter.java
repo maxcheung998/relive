@@ -19,9 +19,6 @@ import jiguang.chat.R;
 import jiguang.chat.activity.GroupGridViewActivity;
 import jiguang.chat.utils.BitmapLoader;
 
-/**
- * Created by ${chenyn} on 2017/5/8.
- */
 
 public class GroupGridViewAdapter extends BaseAdapter {
     private Activity mContext;

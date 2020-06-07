@@ -29,10 +29,6 @@ import jiguang.chat.utils.ViewHolder;
 import jiguang.chat.view.MyImageView;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-/**
- * Created by ${chenyn} on 2017/8/29.
- */
-
 public class OtherFileAdapter extends BaseAdapter implements StickyListHeadersAdapter {
     private List<FileItem> mList;
     private LayoutInflater mInflater;

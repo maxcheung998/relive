@@ -1,8 +1,5 @@
 package jiguang.chat.model;
 
-/**
- * Created by ${chenyn} on 2017/8/14.
- */
 
 public class UserModel<T> {
     public String type;

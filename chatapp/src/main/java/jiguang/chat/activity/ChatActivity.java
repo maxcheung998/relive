@@ -119,7 +119,7 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
     public static final String TARGET_ID = "targetId";
     public static final String TARGET_APP_KEY = "targetAppKey";
     private static final String DRAFT = "draft";
-    private ArrayList<ImageItem> selImageList; //当前选择的所有图片
+    private ArrayList<ImageItem> selImageList;
     public static final int REQUEST_CODE_SELECT = 100;
     private ChatView mChatView;
     private boolean mIsSingle = true;
@@ -430,10 +430,7 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
         ekBar.addOnFuncKeyBoardListener(this);
         SimpleAppsGridView gridView = new SimpleAppsGridView(this);
         ekBar.addFuncView(gridView);
-
         ekBar.getEtChat().setOnSizeChangedListener((w, h, oldw, oldh) -> scrollToBottom());
-        //发送按钮
-        //发送文本消息
         ekBar.getBtnSend().setOnClickListener(v -> {
             String mcgContent = ekBar.getEtChat().getText().toString();
             scrollToBottom();
@@ -442,36 +439,17 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
             }
             Message msg;
             TextContent content = new TextContent(mcgContent);
-            if (mAtAll) {
-                msg = mConv.createSendMessageAtAllMember(content, null);
-                mAtAll = false;
-            } else if (null != mAtList) {
-                msg = mConv.createSendMessage(content, mAtList, null);
-            } else {
-                LogUtils.d("ChatActivity", "create send message conversation = " + mConv + "==content==" + content.toString());
-                msg = mConv.createSendMessage(content);
-            }
+            LogUtils.d("ChatActivity", "create send message conversation = " + mConv + "==content==" + content.toString());
+            msg = mConv.createSendMessage(content);
 
-            if (!isChatRoom) {
-                //设置需要已读回执
-                MessageSendingOptions options = new MessageSendingOptions();
-                options.setNeedReadReceipt(true);
-                JMessageClient.sendMessage(msg, options);
-                mChatAdapter.addMsgFromReceiptToList(msg);
-                ekBar.getEtChat().setText("");
-                if (mAtList != null) {
-                    mAtList.clear();
-                }
-                if (forDel != null) {
-                    forDel.clear();
-                }
-            } else {
-                JMessageClient.sendMessage(msg);
-                mChatAdapter.addMsgToList(msg);
-                ekBar.getEtChat().setText("");
-            }
+            MessageSendingOptions options = new MessageSendingOptions();
+            options.setNeedReadReceipt(true);
+            JMessageClient.sendMessage(msg, options);
+            mChatAdapter.addMsgFromReceiptToList(msg);
+            ekBar.getEtChat().setText("");
+
         });
-        //切换语音输入
+
         ekBar.getVoiceOrText().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -950,17 +928,10 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
                                     if (position == 0) {
                                         if (msg.getContentType() == ContentType.text) {
                                             final String content = ((TextContent) msg.getContent()).getText();
-                                            if (Build.VERSION.SDK_INT > 11) {
-                                                ClipboardManager clipboard = (ClipboardManager) mContext
-                                                        .getSystemService(Context.CLIPBOARD_SERVICE);
-                                                ClipData clip = ClipData.newPlainText("Simple text", content);
-                                                clipboard.setPrimaryClip(clip);
-                                            } else {
-                                                android.text.ClipboardManager clip = (android.text.ClipboardManager) mContext
-                                                        .getSystemService(Context.CLIPBOARD_SERVICE);
-                                                if (clip.hasText()) {
-                                                    clip.getText();
-                                                }
+                                            android.text.ClipboardManager clip = (android.text.ClipboardManager) mContext
+                                                    .getSystemService(Context.CLIPBOARD_SERVICE);
+                                            if (clip.hasText()) {
+                                                clip.getText();
                                             }
                                             Toast.makeText(ChatActivity.this, "已複製", Toast.LENGTH_SHORT).show();
                                         } else {
@@ -1001,17 +972,10 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
                                     if (position == 0) {
                                         if (msg.getContentType() == ContentType.text) {
                                             final String content = ((TextContent) msg.getContent()).getText();
-                                            if (Build.VERSION.SDK_INT > 11) {
-                                                ClipboardManager clipboard = (ClipboardManager) mContext
-                                                        .getSystemService(Context.CLIPBOARD_SERVICE);
-                                                ClipData clip = ClipData.newPlainText("Simple text", content);
-                                                clipboard.setPrimaryClip(clip);
-                                            } else {
-                                                android.text.ClipboardManager clip = (android.text.ClipboardManager) mContext
-                                                        .getSystemService(Context.CLIPBOARD_SERVICE);
-                                                if (clip.hasText()) {
-                                                    clip.getText();
-                                                }
+                                            android.text.ClipboardManager clip = (android.text.ClipboardManager) mContext
+                                                    .getSystemService(Context.CLIPBOARD_SERVICE);
+                                            if (clip.hasText()) {
+                                                clip.getText();
                                             }
                                             Toast.makeText(ChatActivity.this, "已複製", Toast.LENGTH_SHORT).show();
                                         } else {
@@ -1063,8 +1027,8 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
                     float OldListY = (float) location[1];
                     float OldListX = (float) location[0];
                     new TipView.Builder(ChatActivity.this, mChatView, (int) OldListX + view.getWidth() / 2, (int) OldListY + view.getHeight())
-                            .addItem(new TipItem("转发"))
-                            .addItem(new TipItem("删除"))
+                            .addItem(new TipItem("轉發"))
+                            .addItem(new TipItem("刪除"))
                             .setOnItemClickListener(new TipView.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(String str, final int position) {

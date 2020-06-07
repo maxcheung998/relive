@@ -8,9 +8,6 @@ import jiguang.chat.R;
 import jiguang.chat.activity.FriendInfoActivity;
 import jiguang.chat.activity.FriendSettingActivity;
 
-/**
- * Created by ${chenyn} on 2017/3/24.
- */
 
 public class FriendInfoController implements View.OnClickListener {
     private FriendInfoActivity mContext;

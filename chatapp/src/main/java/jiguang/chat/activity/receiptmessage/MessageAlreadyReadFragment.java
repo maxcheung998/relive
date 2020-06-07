@@ -16,9 +16,6 @@ import jiguang.chat.activity.GroupNotFriendActivity;
 import jiguang.chat.activity.fragment.BaseFragment;
 import jiguang.chat.application.JGApplication;
 
-/**
- * Created by ${chenyn} on 2017/9/5.
- */
 
 public class MessageAlreadyReadFragment extends BaseFragment {
     private Activity mContext;

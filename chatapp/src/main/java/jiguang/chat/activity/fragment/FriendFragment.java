@@ -19,10 +19,6 @@ import jiguang.chat.database.FriendRecommendEntry;
 import jiguang.chat.database.UserEntry;
 import jiguang.chat.entity.FriendInvitation;
 
-/**
- * Created by ${chenyn} on 2017/11/7.
- */
-
 public class FriendFragment extends BaseFragment {
 
     private Activity mContext;

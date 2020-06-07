@@ -1,8 +1,6 @@
 package jiguang.chat.database;
 
-/**
- * Created by ${chenyn} on 2017/7/18.
- */
+
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;

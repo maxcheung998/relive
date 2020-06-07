@@ -16,10 +16,6 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.UserInfo;
 import jiguang.chat.R;
 
-/**
- * Created by ${chenyn} on 2017/7/16.
- */
-
 public class ForwardMsgAdapter extends BaseAdapter {
     private Context mContext;
     private List<Conversation> mConvList;

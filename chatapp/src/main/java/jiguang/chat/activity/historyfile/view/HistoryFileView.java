@@ -15,10 +15,6 @@ import jiguang.chat.R;
 import jiguang.chat.utils.SharePreferenceManager;
 import jiguang.chat.view.ScrollControlViewPager;
 
-/**
- * Created by ${chenyn} on 2017/8/24.
- */
-
 public class HistoryFileView extends RelativeLayout {
     private ScrollControlViewPager mViewContainer;
     private ImageButton mReturnBtn;

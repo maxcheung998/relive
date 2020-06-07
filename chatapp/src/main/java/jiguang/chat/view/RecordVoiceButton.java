@@ -127,20 +127,12 @@ public class RecordVoiceButton extends Button {
         mTimeShort.setContentView(R.layout.send_voice_time_short);
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                if (mConv.getType() == ConversationType.single) {
-                    JMessageClient.sendSingleTransCommand(mUserName, null, "对方正在说话...", new BasicCallback() {
-                        @Override
-                        public void gotResult(int i, String s) {
 
-                        }
-                    });
-                }
-                //文字 松开结束
                 this.setText(mContext.getString(R.string.jmui_send_voice_hint));
                 mIsPressed = true;
                 time1 = System.currentTimeMillis();
                 mTouchY1 = event.getY();
-                //检查sd卡是否存在
+
                 if (FileHelper.isSdCardExist()) {
                     if (isTimerCanceled) {
                         timer = createTimer();
@@ -156,31 +148,18 @@ public class RecordVoiceButton extends Button {
                 } else {
                     Toast.makeText(this.getContext(), mContext.getString(R.string.jmui_sdcard_not_exist_toast), Toast.LENGTH_SHORT).show();
                     this.setPressed(false);
-                    //文字 按住说话
                     this.setText(mContext.getString(R.string.jmui_record_voice_hint));
                     mIsPressed = false;
                     return false;
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                if (mConv.getType() == ConversationType.single) {
-                    JMessageClient.sendSingleTransCommand(mUserName, null, mConv.getTitle(), new BasicCallback() {
-                        @Override
-                        public void gotResult(int i, String s) {
-
-                        }
-                    });
-                }
-                //文字 按住说话
                 this.setText(mContext.getString(R.string.jmui_record_voice_hint));
                 mIsPressed = false;
                 this.setPressed(false);
                 mTouchY2 = event.getY();
                 time2 = System.currentTimeMillis();
-                if (time2 - time1 < 300) {
-                    showCancelDialog();
-                    return true;
-                } else if (time2 - time1 < 1000) {
+                if (time2 - time1 < 1000) {
                     showCancelDialog();
                     cancelRecord();
                 } else if (mTouchY1 - mTouchY2 > MIN_CANCEL_DISTANCE) {
@@ -191,9 +170,9 @@ public class RecordVoiceButton extends Button {
                 break;
             case MotionEvent.ACTION_MOVE:
                 mTouchY = event.getY();
-                //手指上滑到超出限定后，显示松开取消发送提示
+
                 if (mTouchY1 - mTouchY > MIN_CANCEL_DISTANCE) {
-                    //文字  松开手指取消发送
+
                     this.setText(mContext.getString(R.string.jmui_cancel_record_voice_hint));
                     mVolumeHandler.sendEmptyMessage(CANCEL_RECORD);
                     if (mThread != null) {
@@ -201,7 +180,7 @@ public class RecordVoiceButton extends Button {
                     }
                     mThread = null;
                 } else {
-                    //文字 送开结束
+
                     this.setText(mContext.getString(R.string.jmui_send_voice_hint));
                     if (mThread == null) {
                         mThread = new ObtainDecibelThread();
@@ -209,8 +188,8 @@ public class RecordVoiceButton extends Button {
                     }
                 }
                 break;
-            case MotionEvent.ACTION_CANCEL:// 当手指移动到view外面，会cancel
-                //文字 按住说话
+            case MotionEvent.ACTION_CANCEL:
+
                 this.setText(mContext.getString(R.string.jmui_record_voice_hint));
                 cancelRecord();
                 break;
@@ -302,36 +281,16 @@ public class RecordVoiceButton extends Button {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                //某些手机会限制录音，如果用户拒接使用录音，则需判断mp是否存在
+
                 if (mp != null) {
-                    int duration = mp.getDuration() / 1000;//即为时长 是s
-                    if (duration < 1) {
-                        duration = 1;
-                    } else if (duration > 60) {
-                        duration = 60;
-                    }
+                    int duration = mp.getDuration() / 1000;
                     try {
                         VoiceContent content = new VoiceContent(myRecAudioFile, duration);
                         Message msg = mConv.createSendMessage(content);
                         mMsgListAdapter.addMsgFromReceiptToList(msg);
-                        if (mConv.getType() == ConversationType.single) {
-                            UserInfo userInfo = (UserInfo) msg.getTargetInfo();
-                            MessageSendingOptions options = new MessageSendingOptions();
-                            options.setNeedReadReceipt(true);
-                            JMessageClient.sendMessage(msg, options);
-//                            if (userInfo.isFriend()) {
-//                                JMessageClient.sendMessage(msg);
-//                            } else {
-//                                CustomContent customContent = new CustomContent();
-//                                customContent.setBooleanValue("notFriend", true);
-//                                Message customMsg = mConv.createSendMessage(customContent);
-//                                mMsgListAdapter.addMsgToList(customMsg);
-//                            }
-                        } else {
-                            MessageSendingOptions options = new MessageSendingOptions();
-                            options.setNeedReadReceipt(true);
-                            JMessageClient.sendMessage(msg, options);
-                        }
+                        MessageSendingOptions options = new MessageSendingOptions();
+                        options.setNeedReadReceipt(true);
+                        JMessageClient.sendMessage(msg, options);
                         mChatView.setToBottom();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();

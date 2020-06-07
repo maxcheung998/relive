@@ -42,9 +42,6 @@ import jiguang.chat.utils.ViewHolder;
 import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
 import jiguang.chat.view.SwipeLayout;
 
-/**
- * Created by ${chenyn} on 2017/3/20.
- */
 
 public class FriendRecommendAdapter extends BaseAdapter {
 

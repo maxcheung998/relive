@@ -11,9 +11,6 @@ import android.widget.TextView;
 import jiguang.chat.R;
 import jiguang.chat.utils.SharePreferenceManager;
 
-/**
- * Created by ${chenyn} on 2017/2/20.
- */
 
 public class MainView extends RelativeLayout {
 

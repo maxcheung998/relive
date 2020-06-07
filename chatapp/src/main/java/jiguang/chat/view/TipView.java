@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ${chenyn} on 2017/7/13.
- */
 
 public class TipView extends View {
 
